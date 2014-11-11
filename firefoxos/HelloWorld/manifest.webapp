@@ -1,0 +1,14 @@
+{
+	"name":"Hello World!",
+	"description": "Our first application",
+	"launch_path":"/hello.html",
+	"version":"1.0",
+	"developper":{
+		"name":"me",
+		"url":"http:/cpairelasjunies.com"
+	},
+	"icons":"{
+		"60":"icon_60.png"
+	},
+	"default_locale":"en"
+}

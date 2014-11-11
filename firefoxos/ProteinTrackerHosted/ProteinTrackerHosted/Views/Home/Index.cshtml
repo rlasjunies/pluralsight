@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Protein Home Page";
+}
+
+<section role="region">
+    <header>
+        <menu type="toolbar">
+            <a href="#"><span class="icon icon-add">Add</span></a>
+        </menu>
+        <h1>Protein Tracker</h1>
+        <form>
+            <section>
+                <p>Total:&nbsp;<span id="total">0</span></p>
+            </section>
+            <section>
+                <p>Goal:&nbsp;<span id="goal">1000</span></p>
+            </section>
+            <section>
+                <p>
+                    Amount
+                    <input id="amount" type="number" placeholder="0" required />
+                    <button type="reset">Clear</button>
+                </p>
+                <button>Add</button>
+            </section>
+        </form>
+    </header>
+</section>

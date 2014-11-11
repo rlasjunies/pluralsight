@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Building-Blocks-gh-pages/util.css" rel="stylesheet" type="text/css" />
+    <link href="~/Building-Blocks-gh-pages/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="~/Building-Blocks-gh-pages/style/headers.css" rel="stylesheet" type="text/css" />
+    <link href="~/Building-Blocks-gh-pages/style/input_areas.css" rel="stylesheet" type="text/css" />
+    <link href="~/Building-Blocks-gh-pages/style/buttons.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-2.1.1.js"></script>
+</head>
+<body>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
