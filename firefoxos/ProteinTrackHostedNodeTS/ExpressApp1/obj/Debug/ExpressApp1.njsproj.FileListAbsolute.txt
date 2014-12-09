@@ -1,0 +1,2 @@
+C:\Dev\pluralsight\firefoxos\ProteinTrackHostedNodeTS\ExpressApp1\obj\Debug\ExpressApp1.njsprojResolveAssemblyReference.cache
+C:\Dev\pluralsight\firefoxos\ProteinTrackHostedNodeTS\ExpressApp1\bin\Microsoft.NodejsTools.WebRole.dll

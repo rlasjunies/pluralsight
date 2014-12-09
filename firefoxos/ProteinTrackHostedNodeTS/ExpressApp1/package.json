@@ -1,0 +1,16 @@
+{
+  "name": "ExpressApp1",
+  "version": "0.0.0",
+  "description": "ExpressApp1",
+  "main": "app.js",
+  "author": {
+    "name": "Richard",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "~3.4.4",
+    "hbs": "^2.7.0",
+    "hbs-utils": "0.0.3",
+    "stylus": "^0.49.3"
+  }
+}

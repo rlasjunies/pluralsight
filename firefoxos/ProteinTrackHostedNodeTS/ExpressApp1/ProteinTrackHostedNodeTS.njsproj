@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>ProteinTrackHostedNodeTS</Name>
+    <RootNamespace>ExpressApp1</RootNamespace>
+    <ScriptArguments>
+    </ScriptArguments>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f3ab2dfa-4f42-4b98-ae1a-4498ac1c9245</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="root\manifest.webapp" />
+    <Content Include="public\util.css" />
+    <Content Include="views\index.html" />
+    <Content Include="views\manifest.html" />
+    <Content Include="views\partials\default.html" />
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="routes\manifest.ts" />
+    <TypeScriptCompile Include="routes\index.ts" />
+    <TypeScriptCompile Include="routes\user.ts" />
+    <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\stylus\stylus.d.ts" />
+    <Content Include="package.json" />
+    <Content Include="public\Building-Blocks-gh-pages\app.html" />
+    <Content Include="public\Building-Blocks-gh-pages\cross_browser.css" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts.css" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Bold.eot" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Bold.otf" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Bold.ttf" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Bold.woff" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Light.eot" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Light.otf" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Light.ttf" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Light.woff" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Medium.eot" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Medium.otf" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Medium.ttf" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Medium.woff" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Regular.eot" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Regular.otf" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Regular.ttf" />
+    <Content Include="public\Building-Blocks-gh-pages\fonts\FiraSans\FiraSans-Regular.woff" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\styles\action_icons.css" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\styles\action_icons.png" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\styles\comms_icons.css" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\styles\comms_icons.png" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\styles\media_icons.css" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\styles\media_icons.png" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\styles\settings_icons.css" />
+    <Content Include="public\Building-Blocks-gh-pages\icons\styles\settings_icons.png" />
+    <Content Include="public\Building-Blocks-gh-pages\images\app_icon_128.png" />
+    <Content Include="public\Building-Blocks-gh-pages\images\app_icon_60.png" />
+    <Content Include="public\Building-Blocks-gh-pages\images\photo.jpg" />
+    <Content Include="public\Building-Blocks-gh-pages\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\LICENSE" />
+    <Content Include="public\Building-Blocks-gh-pages\manifest.webapp" />
+    <Content Include="public\Building-Blocks-gh-pages\package.json" />
+    <Content Include="public\Building-Blocks-gh-pages\package\package.manifest" />
+    <Content Include="public\Building-Blocks-gh-pages\package\package.zip" />
+    <Content Include="public\Building-Blocks-gh-pages\README.md" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\header_actions.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\back%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\back%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\back%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\back-rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\back-rtl%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\back-rtl%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\back-rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\back.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\close%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\close%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\close%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\close.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\ui\alpha.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\ui\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\ui\gradient.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\ui\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\images\ui\separator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\action_menu\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\animations.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\dialog%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\dialog%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\dialog%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\dialog-rtl%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\dialog.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\dialog_rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\dialog_rtl%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\dialog_rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\view%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\view%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\view%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\view-rtl%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\view.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\view_rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\view_rtl%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\view_rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\next%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\next%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\next%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\next.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\danger-disabled.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\danger-press.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\danger.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\disabled.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\recommend.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\buttons\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\content.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\content_details.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\danger-disabled.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\danger-press.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\danger.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\disabled.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\gradient%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\gradient%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\gradient%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\gradient.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\pattern%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\pattern%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\pattern%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\recommend.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\long_content.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\confirm\no_title.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\contacts_buttons.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\contact_in_overlay.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\call%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\call%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\call%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\call.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\mail%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\mail%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\mail%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\mail.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\sms%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\sms%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\sms%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\contacts\images\sms.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\icons\checked%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\icons\checked%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\icons\checked.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\affirmative.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\gradient%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\gradient.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\pattern-time.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\shadow-invert%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\shadow-invert%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\shadow-invert.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\date_selector\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\dialer.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcons_30x30_dismiss_keyboard%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcons_30x30_dismiss_keyboard%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcons_40x40_dismiss_keyboard.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_addcontact%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_addcontact%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_addcontact.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_hangup%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_hangup%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_hangup.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_pickup%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_pickup%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\ActionIcon_40x40_pickup.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_dismisskeyboard%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_dismisskeyboard%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_dismisskeyboard%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_dismisskeyboard.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_dismisskeyboard_hitstate%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_dismisskeyboard_hitstate%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_dismisskeyboard_hitstate%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_dismisskeyboard_hitstate.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_hangup%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_hangup%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_hangup%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_hangup.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_pickup%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_pickup%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_pickup%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\actionicon_activecall_pickup.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\asterisk%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\asterisk%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\asterisk.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\btn_generic.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\btn_hang_up.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\btn_pick_up.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\dialer_icon_delete%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\dialer_icon_delete%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\dialer_icon_delete.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\icon_arrow_white%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\icon_arrow_white%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\icon_arrow_white%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\icon_arrow_white.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_addcontact_40x80%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_addcontact_40x80%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_addcontact_40x80%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_addcontact_40x80.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_dismisskeyboard%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_dismisskeyboard%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_dismisskeyboard%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_dismisskeyboard.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_mute%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_mute%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_mute%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_mute.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_pickup%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_pickup%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_pickup%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_activecall_pickup.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_dialer_delete%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_dialer_delete%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_dialer_delete%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_dialer_delete.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_dialer_voicemail%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_dialer_voicemail%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_dialer_voicemail%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\actionicon_dialer_voicemail.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\sharp%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\sharp%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\sharp.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\voicemail%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\voicemail%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\voicemail.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\voicemail_%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\voicemail_.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\dialer\overlay.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\icons\menu%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\icons\menu%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\icons\menu%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\icons\menu.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\header.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\header\header.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\header\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\header\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\header\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\negative.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\pattern_subheader.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\separator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\separator_large.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow_header%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow_header%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow_header.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow_rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow_rtl%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\shadow_rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\drawer\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\back%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\back.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\close%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\close%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\close.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\skin-dark\back%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\skin-dark\back.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\skin-dark\close%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\skin-dark\close.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\alpha.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\danger-disabled.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\danger-press.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\danger.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\disabled.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\recommend.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\separator-large.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\separator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\edit_mode\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\add%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\add%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\add%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\add.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back-rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back-rtl%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back-rtl%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back-rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back_rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\back_rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\clear%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\clear%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\clear.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\close%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\close%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\close%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\close.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\close.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\compose%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\compose%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\compose%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\compose.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\down%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\down%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\down%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\down.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\edit%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\edit%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\edit%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\edit.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\menu%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\menu%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\menu%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\menu.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\menu.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\options%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\options%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\options%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\options.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\add%401.5.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\add%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\add%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\add%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\add.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\back%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\back%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\back%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\back-rtl%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\back.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\back.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\back_rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\back_rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\close%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\close%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\close%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\close.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\close.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\edit%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\edit%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\edit%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\edit.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply-all%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply-all%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply-all.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply.png%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply_all%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply_all%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply_all%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\reply_all.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\send%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\send%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\send%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\send.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\up%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\up%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\up%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\up.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\user%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\user%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\user%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\icons\user.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\dark\header.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\dark\negative.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\dark\separator%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\dark\separator-large.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\dark\separator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\dark\subheader.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\header.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\noise-pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\organic\header.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\organic\negative.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\organic\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\organic\separator-large.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\organic\separator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\organic\subheader.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\overlay\header.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\overlay\separator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\separator-large.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\separator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\images\ui\subheader.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\headers\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\icons.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\icons\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\icons\selection.json" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear_dark%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear_dark%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear_dark%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear_dark.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\clear_dark.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\dialog.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\dialog_active.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\dialog_disabled.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\dialog_disabled_rtl.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\dialog_rtl.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\arrow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\arrow%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\arrow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\arrow-rtl%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\arrow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\arrow_rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\arrow_rtl%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\arrow_rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\clear%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\clear%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\clear%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\clear-dark%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\clear-dark%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\clear-dark%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\clear-dark.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\clear.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\search%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\search%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\search%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\search-dark%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\search-dark%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\search-dark%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\search-dark.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\search.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\search.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\search_dark.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\active.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\background-dark.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\background.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\separator%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\separator%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\separator-dark%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\separator-dark%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\separator-dark.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\separator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow-invert%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow-invert%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow-invert.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow-search%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow-search%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow-search.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\input_areas\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\keyboard_symbols.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\keyboard_symbols\Keyboard-Symbols.ttf" />
+    <Content Include="public\Building-Blocks-gh-pages\style\layout.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\layout\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\lists.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\lists\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\object_menu.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\object_menu\images\ui\gradient.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\object_menu\images\ui\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\object_menu\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\option_menu.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\activity%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\activity%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\activity%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\activity.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\default%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\default%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\default%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\light%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\light%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\light%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\light.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\progress_activity\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\README.md" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\favorites%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\favorites%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\favorites%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\favorites.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\favorites.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\search%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\search%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\search%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\search.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\search.svg" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\images\ui\background.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\scrolling\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\seekbars.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\seekbars\images\ui\handler%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\seekbars\images\ui\handler%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\seekbars\images\ui\handler%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\seekbars\images\ui\handler.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\seekbars\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\shrinking_ui.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\shrinking_ui\images\sending_arrow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\shrinking_ui\images\sending_arrow%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\shrinking_ui\images\sending_arrow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\shrinking_ui\images\sending_arrow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\sim_picker.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\sim_picker\images\long-tap-indicator%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\sim_picker\images\long-tap-indicator%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\sim_picker\images\long-tap-indicator.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\status.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\status\images\ui\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\status\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\check\danger%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\check\danger%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\check\danger%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\check\danger.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\check\default%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\check\default%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\check\default%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\check\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\radio\danger%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\radio\danger%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\radio\danger%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\radio\danger.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\radio\default%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\radio\default%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\radio\default%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\radio\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background_off%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background_off%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background_off%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background_off.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background_on%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background_rtl%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\images\switch\background_rtl.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\switches\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\filters.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\images\ui\background%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\images\ui\background%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\images\ui\background-revert%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\images\ui\background-revert%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\images\ui\background-revert.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\images\ui\background.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\tabs\index_dark.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\icons\checked%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\icons\checked%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\icons\checked.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\affirmative.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\gradient%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\gradient.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\pattern-time.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\shadow-invert%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\shadow-invert%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\shadow-invert.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\time_selector\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\toolbars.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\toolbars\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector.css" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\icons\checked%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\icons\checked%402.25x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\icons\checked%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\icons\checked.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\affirmative.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\default.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\gradient%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\gradient.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\pattern.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\shadow%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\shadow%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\shadow-invert%401.5x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\shadow-invert%402x.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\shadow-invert.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\shadow.png" />
+    <Content Include="public\Building-Blocks-gh-pages\style\value_selector\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\temp\icons.css" />
+    <Content Include="public\Building-Blocks-gh-pages\temp\icons\index.html" />
+    <Content Include="public\Building-Blocks-gh-pages\transitions.css" />
+    <Content Include="public\Building-Blocks-gh-pages\util.css" />
+    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="README.md" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="root\" />
+    <Folder Include="public\" />
+    <Folder Include="public\Building-Blocks-gh-pages\" />
+    <Folder Include="public\Building-Blocks-gh-pages\fonts\" />
+    <Folder Include="public\Building-Blocks-gh-pages\fonts\FiraSans\" />
+    <Folder Include="public\Building-Blocks-gh-pages\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\icons\styles\" />
+    <Folder Include="public\Building-Blocks-gh-pages\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\js\" />
+    <Folder Include="public\Building-Blocks-gh-pages\package\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\action_menu\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\action_menu\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\action_menu\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\action_menu\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\buttons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\buttons\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\buttons\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\buttons\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\confirm\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\confirm\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\confirm\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\contacts\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\contacts\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\date_selector\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\date_selector\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\date_selector\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\date_selector\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\dialer\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\dialer\keypad\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\dialer\keypad\images\keypad\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\drawer\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\drawer\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\drawer\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\drawer\images\ui\header\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\edit_mode\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\edit_mode\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\edit_mode\images\icons\skin-dark\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\edit_mode\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\headers\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\headers\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\headers\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\headers\images\icons\organic\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\headers\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\headers\images\ui\dark\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\headers\images\ui\organic\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\headers\images\ui\overlay\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\input_areas\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\input_areas\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\input_areas\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\input_areas\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\keyboard_symbols\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\layout\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\lists\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\object_menu\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\object_menu\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\object_menu\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\progress_activity\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\progress_activity\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\progress_activity\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\scrolling\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\scrolling\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\scrolling\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\scrolling\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\seekbars\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\seekbars\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\seekbars\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\shrinking_ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\shrinking_ui\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\sim_picker\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\sim_picker\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\status\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\status\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\status\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\switches\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\switches\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\switches\images\check\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\switches\images\radio\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\switches\images\switch\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\tabs\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\tabs\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\tabs\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\time_selector\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\time_selector\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\time_selector\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\time_selector\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\toolbars\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\value_selector\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\value_selector\images\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\value_selector\images\icons\" />
+    <Folder Include="public\Building-Blocks-gh-pages\style\value_selector\images\ui\" />
+    <Folder Include="public\Building-Blocks-gh-pages\temp\" />
+    <Folder Include="public\Building-Blocks-gh-pages\temp\icons\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\typings\" />
+    <Folder Include="Scripts\typings\express\" />
+    <Folder Include="Scripts\typings\node\" />
+    <Folder Include="Scripts\typings\stylus\" />
+    <Folder Include="views\" />
+    <Folder Include="views\partials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="public\Building-Blocks-gh-pages\js\action_menu.js" />
+    <Compile Include="public\Building-Blocks-gh-pages\js\app.js" />
+    <Compile Include="public\Building-Blocks-gh-pages\js\seekbars.js" />
+    <Compile Include="public\Building-Blocks-gh-pages\js\status.js" />
+    <None Include="Scripts\jquery-2.1.1-vsdoc.js" />
+    <Compile Include="Scripts\jquery-2.1.1.js" />
+    <Compile Include="Scripts\jquery-2.1.1.min.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

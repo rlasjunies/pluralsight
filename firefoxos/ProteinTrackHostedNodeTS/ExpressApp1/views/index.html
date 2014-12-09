@@ -1,0 +1,41 @@
+﻿{{> default}}
+
+<section role="region">
+    <header>
+        <menu type="toolbar">
+            <a href="#"><span class="icon icon-add">add</span></a>
+        </menu>
+        <h1>Protein tracker</h1>
+    </header>
+    <form>
+        <section>
+            <p>Total:&nbsp;<span id="total">0</span></p>
+        </section>
+        <section>
+            <p>Goal:&nbsp;<span id="goal">0</span></p>
+        </section>
+        <section>
+            <p>Amount
+                <input id="amount" type="number" placeholder="0" required/>
+                <button type="reset">Clear</button>
+            </p>
+        </section>
+        <button id="addButton">Add</button>
+    </form>
+</section>
+
+<script type="text/javascript">
+        var total = 0;
+        var goal = 100;
+
+        $(document).ready(function () {
+            $('#goal').text(goal);
+            $('#addButton').click(addProtein);      
+        });
+
+        function addProtein() {
+            var amount = $('#amount').val();
+            total += parseInt(amount);
+            $('#total').text(total);
+        }
+</script>
