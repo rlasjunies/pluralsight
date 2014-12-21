@@ -48,6 +48,8 @@
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <TypeScriptCompile Include="Scripts\typings\passport-local\passport-local.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\passport\passport.d.ts" />
     <TypeScriptCompile Include="server.ts" />
     <TypeScriptCompile Include="services\jwt.ts" />
     <TypeScriptCompile Include="_references.ts" />
@@ -55,6 +57,8 @@
   <ItemGroup>
     <Folder Include="models\" />
     <Folder Include="Scripts\typings\jwt-simple\" />
+    <Folder Include="Scripts\typings\passport-local\" />
+    <Folder Include="Scripts\typings\passport\" />
     <Folder Include="services\" />
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\typings\" />

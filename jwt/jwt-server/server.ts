@@ -5,10 +5,17 @@ import libuser = require("./models/user");
 import db = require("./db");
 //import jwt = require("./services/jwt");
 import jwt = require("jwt-simple");
+import passport = require("passport");
+import passport_local = require("passport-local");
 
 var app = express();
 
 app.use(bodyparser.json());
+app.use(passport.initialize());
+
+passport.serializeUser( (user, done: (err: any, id: any) => void) =>  {
+    done(null, user.id);
+});
 
 app.use(function (req: express.Request, res: express.Response, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -16,6 +23,30 @@ app.use(function (req: express.Request, res: express.Response, next) {
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     next();
 });
+
+var localStrategy: passport_local.Strategy = new passport_local.Strategy(
+    { usernameField: 'email' },
+    (username, password, done) => {
+
+        var qryUser = { email: username };
+        libuser.userModel().findOne(qryUser, function (err, dbUser) {
+            if (err) return done(err);
+
+            if (!dbUser)
+                return done(null, false, { message: "Wrong email / password" });
+
+            dbUser.comparePasswords(password, function (err, isMatching) {
+                if (err) return done(err);
+
+                if (!isMatching)
+                    return done(null, false, { message: "Wrong email / password" });
+
+                return done(null, dbUser);
+            });
+        });
+    });
+
+passport.use(localStrategy);
 
 app.get("/", function (req, res) {
     res.redirect("/app");
@@ -25,13 +56,13 @@ app.get("/", function (req, res) {
 
 app.post("/api/register", function (req: express.Request, res: express.Response) {
 
-console.log("0" + Date.now());
+    console.log("0" + Date.now());
     var user: libuser.IUserDocument = req.body;
 
-console.log("1" + Date.now());
+    console.log("1" + Date.now());
     var userModel = libuser.userModel();
 
-console.log("2" + Date.now());
+    console.log("2" + Date.now());
     var newUser: libuser.IUserDocument = new userModel({
         email: user.email,
         password: user.password
@@ -41,7 +72,7 @@ console.log("2" + Date.now());
         if (err) {
             throw err;
         }
-        createSendToken(newUser, res); 
+        createSendToken(newUser, res);
     });
 });
 
@@ -71,32 +102,19 @@ app.get("/api/jobs", function (req: express.Request, res: express.Response) {
 });
 
 
-app.post("/api/login", function (req: express.Request, res: express.Response) {
-    var reqUser = req.body;
+app.post("/api/login", function (req: express.Request, res: express.Response, next) {
+    passport.authenticate('local', (err, user) => {
+        if (err) next(err);
 
-    libuser.userModel().findOne({ email: reqUser.email }, function (err, dbUser) {
-        if (err) throw err;
-
-        if (!dbUser)
-            return res.status(401).send({ message: "Wrong email / password" });
-
-        dbUser.comparePasswords(reqUser.password, function (err, isMatching) {
-            if (err) throw err;
-
-            if (!isMatching)
-                return res.status(401).send({ message: "Wrong email / password" });
-
-            createSendToken(dbUser, res);
-        });
-    });
-
-    console.log("1" + Date.now());
-    //var userModel = libuser.userModel();
-    //libuser.userModel
-}); 
+        req.login(user, (err) => {
+            if (err) next(err);
+            createSendToken(user, res);
+        })
+    })(req, res, next);
+});
 
 function createSendToken(user, res) {
-console.log("createToken-Start:" + Date.now());
+    console.log("createToken-Start:" + Date.now());
 
     var payload = {
         sub: user.id

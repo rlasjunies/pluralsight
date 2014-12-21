@@ -4,14 +4,37 @@ var libuser = require("./models/user");
 var db = require("./db");
 //import jwt = require("./services/jwt");
 var jwt = require("jwt-simple");
+var passport = require("passport");
+var passport_local = require("passport-local");
 var app = express();
 app.use(bodyparser.json());
+app.use(passport.initialize());
+passport.serializeUser(function (user, done) {
+    done(null, user.id);
+});
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     next();
 });
+var localStrategy = new passport_local.Strategy({ usernameField: 'email' }, function (username, password, done) {
+    var qryUser = { email: username };
+    libuser.userModel().findOne(qryUser, function (err, dbUser) {
+        if (err)
+            return done(err);
+        if (!dbUser)
+            return done(null, false, { message: "Wrong email / password" });
+        dbUser.comparePasswords(password, function (err, isMatching) {
+            if (err)
+                return done(err);
+            if (!isMatching)
+                return done(null, false, { message: "Wrong email / password" });
+            return done(null, dbUser);
+        });
+    });
+});
+passport.use(localStrategy);
 app.get("/", function (req, res) {
     res.redirect("/app");
 });
@@ -54,24 +77,16 @@ app.get("/api/jobs", function (req, res) {
         }
     }
 });
-app.post("/api/login", function (req, res) {
-    var reqUser = req.body;
-    libuser.userModel().findOne({ email: reqUser.email }, function (err, dbUser) {
+app.post("/api/login", function (req, res, next) {
+    passport.authenticate('local', function (err, user) {
         if (err)
-            throw err;
-        if (!dbUser)
-            return res.status(401).send({ message: "Wrong email / password" });
-        dbUser.comparePasswords(reqUser.password, function (err, isMatching) {
+            next(err);
+        req.login(user, function (err) {
             if (err)
-                throw err;
-            if (!isMatching)
-                return res.status(401).send({ message: "Wrong email / password" });
-            createSendToken(dbUser, res);
+                next(err);
+            createSendToken(user, res);
         });
-    });
-    console.log("1" + Date.now());
-    //var userModel = libuser.userModel();
-    //libuser.userModel
+    })(req, res, next);
 });
 function createSendToken(user, res) {
     console.log("createToken-Start:" + Date.now());
