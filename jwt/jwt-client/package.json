@@ -1,0 +1,13 @@
+{
+  "name": "jwt",
+  "version": "0.0.0",
+  "description": "jwt",
+  "main": "app.js",
+  "author": {
+    "name": "Richard",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "^4.10.6"
+  }
+}

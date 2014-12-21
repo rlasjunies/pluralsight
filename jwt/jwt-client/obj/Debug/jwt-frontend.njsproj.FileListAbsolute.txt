@@ -1,0 +1,1 @@
+C:\Dev\pluralsight\jwt\jwt\bin\Microsoft.NodejsTools.WebRole.dll

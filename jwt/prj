@@ -1,0 +1,1962 @@
+<NotepadPlus>
+    <Project name="jwt">
+        <Folder name="jwt">
+            <Folder name="obj">
+                <Folder name="Debug" />
+            </Folder>
+        </Folder>
+        <Folder name="jwt-client">
+            <Folder name="app">
+                <Folder name="directives" />
+                <Folder name="services">
+                    <File name="jwt-client\app\services\customersService.ts" />
+                    <File name="jwt-client\app\services\notificationService.ts" />
+                </Folder>
+                <Folder name="views">
+                    <Folder name="jobs" />
+                    <Folder name="main">
+                        <File name="jwt-client\app\views\main\main.html" />
+                    </Folder>
+                    <Folder name="register">
+                        <File name="jwt-client\app\views\register\register.html" />
+                        <File name="jwt-client\app\views\register\registerController.ts" />
+                        <File name="jwt-client\app\views\register\validateEqualsDirective.ts" />
+                    </Folder>
+                </Folder>
+                <File name="jwt-client\app\app.config.ts" />
+                <File name="jwt-client\app\app.html" />
+                <File name="jwt-client\app\app.route.ts" />
+                <File name="jwt-client\app\app.ts" />
+            </Folder>
+            <Folder name="bin">
+                <File name="jwt-client\bin\Microsoft.NodejsTools.WebRole.dll" />
+            </Folder>
+            <Folder name="fonts">
+                <File name="jwt-client\fonts\glyphicons-halflings-regular.eot" />
+                <File name="jwt-client\fonts\glyphicons-halflings-regular.svg" />
+                <File name="jwt-client\fonts\glyphicons-halflings-regular.ttf" />
+                <File name="jwt-client\fonts\glyphicons-halflings-regular.woff" />
+            </Folder>
+            <Folder name="node_modules">
+                <Folder name="express">
+                    <Folder name="lib">
+                        <Folder name="middleware">
+                            <File name="jwt-client\node_modules\express\lib\middleware\init.js" />
+                            <File name="jwt-client\node_modules\express\lib\middleware\query.js" />
+                        </Folder>
+                        <Folder name="router">
+                            <File name="jwt-client\node_modules\express\lib\router\index.js" />
+                            <File name="jwt-client\node_modules\express\lib\router\layer.js" />
+                            <File name="jwt-client\node_modules\express\lib\router\route.js" />
+                        </Folder>
+                        <File name="jwt-client\node_modules\express\lib\application.js" />
+                        <File name="jwt-client\node_modules\express\lib\express.js" />
+                        <File name="jwt-client\node_modules\express\lib\request.js" />
+                        <File name="jwt-client\node_modules\express\lib\response.js" />
+                        <File name="jwt-client\node_modules\express\lib\utils.js" />
+                        <File name="jwt-client\node_modules\express\lib\view.js" />
+                    </Folder>
+                    <Folder name="node_modules">
+                        <Folder name="accepts">
+                            <Folder name="node_modules">
+                                <Folder name="mime-types">
+                                    <Folder name="node_modules">
+                                        <Folder name="mime-db">
+                                            <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\db.json" />
+                                            <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\index.js" />
+                                            <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\LICENSE" />
+                                            <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\package.json" />
+                                            <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\README.md" />
+                                        </Folder>
+                                    </Folder>
+                                    <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\HISTORY.md" />
+                                    <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\index.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\LICENSE" />
+                                    <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\mime-types\README.md" />
+                                </Folder>
+                                <Folder name="negotiator">
+                                    <Folder name="lib">
+                                        <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\charset.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\encoding.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\language.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\mediaType.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\negotiator.js" />
+                                    </Folder>
+                                    <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\negotiator\LICENSE" />
+                                    <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\negotiator\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\accepts\node_modules\negotiator\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\accepts\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\accepts\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\accepts\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\accepts\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\accepts\README.md" />
+                        </Folder>
+                        <Folder name="content-disposition">
+                            <File name="jwt-client\node_modules\express\node_modules\content-disposition\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\content-disposition\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\content-disposition\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\content-disposition\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\content-disposition\README.md" />
+                        </Folder>
+                        <Folder name="cookie">
+                            <File name="jwt-client\node_modules\express\node_modules\cookie\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie\README.md" />
+                        </Folder>
+                        <Folder name="cookie-signature">
+                            <File name="jwt-client\node_modules\express\node_modules\cookie-signature\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie-signature\History.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie-signature\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie-signature\Makefile" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie-signature\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\cookie-signature\Readme.md" />
+                        </Folder>
+                        <Folder name="debug">
+                            <Folder name="node_modules">
+                                <Folder name="ms">
+                                    <File name="jwt-client\node_modules\express\node_modules\debug\node_modules\ms\.npmignore" />
+                                    <File name="jwt-client\node_modules\express\node_modules\debug\node_modules\ms\index.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\debug\node_modules\ms\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\debug\node_modules\ms\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\debug\.jshintrc" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\browser.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\component.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\debug.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\History.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\Makefile" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\node.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\debug\Readme.md" />
+                        </Folder>
+                        <Folder name="depd">
+                            <Folder name="lib">
+                                <Folder name="compat">
+                                    <File name="jwt-client\node_modules\express\node_modules\depd\lib\compat\buffer-concat.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\depd\lib\compat\callsite-tostring.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\depd\lib\compat\index.js" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\depd\History.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\depd\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\depd\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\depd\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\depd\Readme.md" />
+                        </Folder>
+                        <Folder name="escape-html">
+                            <File name="jwt-client\node_modules\express\node_modules\escape-html\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\escape-html\component.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\escape-html\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\escape-html\Makefile" />
+                            <File name="jwt-client\node_modules\express\node_modules\escape-html\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\escape-html\Readme.md" />
+                        </Folder>
+                        <Folder name="etag">
+                            <Folder name="node_modules">
+                                <Folder name="crc">
+                                    <Folder name="lib">
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc1.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc16.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc16_ccitt.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc16_modbus.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc24.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc32.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc8.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\crc8_1wire.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\create.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\hex.js" />
+                                        <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\lib\index.js" />
+                                    </Folder>
+                                    <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\.npmignore" />
+                                    <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\LICENSE" />
+                                    <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\etag\node_modules\crc\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\etag\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\etag\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\etag\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\etag\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\etag\README.md" />
+                        </Folder>
+                        <Folder name="finalhandler">
+                            <File name="jwt-client\node_modules\express\node_modules\finalhandler\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\finalhandler\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\finalhandler\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\finalhandler\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\finalhandler\README.md" />
+                        </Folder>
+                        <Folder name="fresh">
+                            <File name="jwt-client\node_modules\express\node_modules\fresh\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\fresh\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\fresh\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\fresh\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\fresh\README.md" />
+                        </Folder>
+                        <Folder name="media-typer">
+                            <File name="jwt-client\node_modules\express\node_modules\media-typer\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\media-typer\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\media-typer\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\media-typer\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\media-typer\README.md" />
+                        </Folder>
+                        <Folder name="merge-descriptors">
+                            <File name="jwt-client\node_modules\express\node_modules\merge-descriptors\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\merge-descriptors\component.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\merge-descriptors\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\merge-descriptors\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\merge-descriptors\README.md" />
+                        </Folder>
+                        <Folder name="methods">
+                            <Folder name="test">
+                                <File name="jwt-client\node_modules\express\node_modules\methods\test\methods.js" />
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\methods\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\methods\History.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\methods\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\methods\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\methods\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\methods\Readme.md" />
+                        </Folder>
+                        <Folder name="on-finished">
+                            <Folder name="node_modules">
+                                <Folder name="ee-first">
+                                    <File name="jwt-client\node_modules\express\node_modules\on-finished\node_modules\ee-first\index.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\on-finished\node_modules\ee-first\LICENSE" />
+                                    <File name="jwt-client\node_modules\express\node_modules\on-finished\node_modules\ee-first\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\on-finished\node_modules\ee-first\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\on-finished\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\on-finished\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\on-finished\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\on-finished\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\on-finished\README.md" />
+                        </Folder>
+                        <Folder name="parseurl">
+                            <File name="jwt-client\node_modules\express\node_modules\parseurl\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\parseurl\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\parseurl\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\parseurl\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\parseurl\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\parseurl\README.md" />
+                        </Folder>
+                        <Folder name="path-to-regexp">
+                            <File name="jwt-client\node_modules\express\node_modules\path-to-regexp\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\path-to-regexp\component.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\path-to-regexp\History.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\path-to-regexp\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\path-to-regexp\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\path-to-regexp\Readme.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\path-to-regexp\test.js" />
+                        </Folder>
+                        <Folder name="proxy-addr">
+                            <Folder name="node_modules">
+                                <Folder name="forwarded">
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\HISTORY.md" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\index.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\LICENSE" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\README.md" />
+                                </Folder>
+                                <Folder name="ipaddr.js">
+                                    <Folder name="lib">
+                                        <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\lib\ipaddr.js" />
+                                    </Folder>
+                                    <Folder name="src">
+                                        <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\src\ipaddr.coffee" />
+                                    </Folder>
+                                    <Folder name="test">
+                                        <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\test\ipaddr.test.coffee" />
+                                    </Folder>
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\.npmignore" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\Cakefile" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\ipaddr.min.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\LICENSE" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\proxy-addr\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\proxy-addr\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\proxy-addr\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\proxy-addr\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\proxy-addr\README.md" />
+                        </Folder>
+                        <Folder name="qs">
+                            <Folder name="lib">
+                                <File name="jwt-client\node_modules\express\node_modules\qs\lib\index.js" />
+                                <File name="jwt-client\node_modules\express\node_modules\qs\lib\parse.js" />
+                                <File name="jwt-client\node_modules\express\node_modules\qs\lib\stringify.js" />
+                                <File name="jwt-client\node_modules\express\node_modules\qs\lib\utils.js" />
+                            </Folder>
+                            <Folder name="test">
+                                <File name="jwt-client\node_modules\express\node_modules\qs\test\parse.js" />
+                                <File name="jwt-client\node_modules\express\node_modules\qs\test\stringify.js" />
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\qs\.jshintignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\.jshintrc" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\.travis.yml" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\CHANGELOG.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\CONTRIBUTING.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\Makefile" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\qs\README.md" />
+                        </Folder>
+                        <Folder name="range-parser">
+                            <File name="jwt-client\node_modules\express\node_modules\range-parser\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\range-parser\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\range-parser\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\range-parser\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\range-parser\README.md" />
+                        </Folder>
+                        <Folder name="send">
+                            <Folder name="node_modules">
+                                <Folder name="destroy">
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\destroy\index.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\destroy\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\destroy\README.md" />
+                                </Folder>
+                                <Folder name="mime">
+                                    <Folder name="types">
+                                        <File name="jwt-client\node_modules\express\node_modules\send\node_modules\mime\types\mime.types" />
+                                        <File name="jwt-client\node_modules\express\node_modules\send\node_modules\mime\types\node.types" />
+                                    </Folder>
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\mime\LICENSE" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\mime\mime.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\mime\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\mime\README.md" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\mime\test.js" />
+                                </Folder>
+                                <Folder name="ms">
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\ms\.npmignore" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\ms\index.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\ms\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\send\node_modules\ms\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\send\History.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\send\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\send\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\send\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\send\Readme.md" />
+                        </Folder>
+                        <Folder name="serve-static">
+                            <File name="jwt-client\node_modules\express\node_modules\serve-static\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\serve-static\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\serve-static\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\serve-static\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\serve-static\README.md" />
+                        </Folder>
+                        <Folder name="type-is">
+                            <Folder name="node_modules">
+                                <Folder name="mime-types">
+                                    <Folder name="node_modules">
+                                        <Folder name="mime-db">
+                                            <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\db.json" />
+                                            <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\index.js" />
+                                            <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\LICENSE" />
+                                            <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\package.json" />
+                                            <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\README.md" />
+                                        </Folder>
+                                    </Folder>
+                                    <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\HISTORY.md" />
+                                    <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\index.js" />
+                                    <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\LICENSE" />
+                                    <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\package.json" />
+                                    <File name="jwt-client\node_modules\express\node_modules\type-is\node_modules\mime-types\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-client\node_modules\express\node_modules\type-is\HISTORY.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\type-is\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\type-is\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\type-is\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\type-is\README.md" />
+                        </Folder>
+                        <Folder name="utils-merge">
+                            <File name="jwt-client\node_modules\express\node_modules\utils-merge\.travis.yml" />
+                            <File name="jwt-client\node_modules\express\node_modules\utils-merge\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\utils-merge\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\utils-merge\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\utils-merge\README.md" />
+                        </Folder>
+                        <Folder name="vary">
+                            <File name="jwt-client\node_modules\express\node_modules\vary\.npmignore" />
+                            <File name="jwt-client\node_modules\express\node_modules\vary\History.md" />
+                            <File name="jwt-client\node_modules\express\node_modules\vary\index.js" />
+                            <File name="jwt-client\node_modules\express\node_modules\vary\LICENSE" />
+                            <File name="jwt-client\node_modules\express\node_modules\vary\package.json" />
+                            <File name="jwt-client\node_modules\express\node_modules\vary\README.md" />
+                        </Folder>
+                    </Folder>
+                    <File name="jwt-client\node_modules\express\History.md" />
+                    <File name="jwt-client\node_modules\express\index.js" />
+                    <File name="jwt-client\node_modules\express\LICENSE" />
+                    <File name="jwt-client\node_modules\express\package.json" />
+                    <File name="jwt-client\node_modules\express\Readme.md" />
+                </Folder>
+            </Folder>
+            <Folder name="obj">
+                <Folder name="Debug">
+                    <File name="jwt-client\obj\Debug\jwt-client.njsproj.FileListAbsolute.txt" />
+                    <File name="jwt-client\obj\Debug\jwt-client.njsprojResolveAssemblyReference.cache" />
+                    <File name="jwt-client\obj\Debug\jwt-frontend.njsproj.FileListAbsolute.txt" />
+                </Folder>
+            </Folder>
+            <Folder name="Scripts">
+                <Folder name="typings">
+                    <Folder name="angular-ui">
+                        <File name="jwt-client\Scripts\typings\angular-ui\angular-ui-router.d.ts" />
+                    </Folder>
+                    <Folder name="angularjs">
+                        <File name="jwt-client\Scripts\typings\angularjs\angular-animate.d.ts" />
+                        <File name="jwt-client\Scripts\typings\angularjs\angular-cookies.d.ts" />
+                        <File name="jwt-client\Scripts\typings\angularjs\angular-resource.d.ts" />
+                        <File name="jwt-client\Scripts\typings\angularjs\angular-route.d.ts" />
+                        <File name="jwt-client\Scripts\typings\angularjs\angular-sanitize.d.ts" />
+                        <File name="jwt-client\Scripts\typings\angularjs\angular-scenario.d.ts" />
+                        <File name="jwt-client\Scripts\typings\angularjs\angular.d.ts" />
+                    </Folder>
+                    <Folder name="express">
+                        <File name="jwt-client\Scripts\typings\express\express.d.ts" />
+                    </Folder>
+                    <Folder name="jquery">
+                        <File name="jwt-client\Scripts\typings\jquery\jquery.d.ts" />
+                    </Folder>
+                    <Folder name="node">
+                        <File name="jwt-client\Scripts\typings\node\node.d.ts" />
+                    </Folder>
+                    <File name="jwt-client\Scripts\typings\bcrypt.d.ts" />
+                </Folder>
+                <File name="jwt-client\Scripts\angular-mocks.js" />
+                <File name="jwt-client\Scripts\angular-ui-router.js" />
+                <File name="jwt-client\Scripts\angular-ui-router.min.js" />
+                <File name="jwt-client\Scripts\angular.js" />
+                <File name="jwt-client\Scripts\angular.min.js" />
+                <File name="jwt-client\Scripts\angular.min.js.map" />
+                <File name="jwt-client\Scripts\app.d.ts" />
+                <File name="jwt-client\Scripts\app.js" />
+                <File name="jwt-client\Scripts\app.js.map" />
+                <File name="jwt-client\Scripts\bootstrap.js" />
+                <File name="jwt-client\Scripts\bootstrap.min.js" />
+                <File name="jwt-client\Scripts\jquery-1.11.1-vsdoc.js" />
+                <File name="jwt-client\Scripts\jquery-1.11.1.js" />
+                <File name="jwt-client\Scripts\jquery-1.11.1.min.js" />
+                <File name="jwt-client\Scripts\jquery-1.11.1.min.map" />
+                <File name="jwt-client\Scripts\npm.js" />
+                <File name="jwt-client\Scripts\toastr.js" />
+                <File name="jwt-client\Scripts\toastr.min.js" />
+            </Folder>
+            <Folder name="styles">
+                <File name="jwt-client\styles\bootstrap-theme.css" />
+                <File name="jwt-client\styles\bootstrap-theme.css.map" />
+                <File name="jwt-client\styles\bootstrap-theme.min.css" />
+                <File name="jwt-client\styles\bootstrap.css" />
+                <File name="jwt-client\styles\bootstrap.css.map" />
+                <File name="jwt-client\styles\bootstrap.min.css" />
+                <File name="jwt-client\styles\bootswatch-superhero.css" />
+                <File name="jwt-client\styles\main.css" />
+                <File name="jwt-client\styles\toastr.css" />
+                <File name="jwt-client\styles\toastr.less" />
+                <File name="jwt-client\styles\toastr.min.css" />
+                <File name="jwt-client\styles\toastr.scss" />
+            </Folder>
+            <File name="jwt-client\.ntvs_analysis.dat" />
+            <File name="jwt-client\jwt-client.njsproj" />
+            <File name="jwt-client\jwt-client.sln" />
+            <File name="jwt-client\jwt-client.v12.suo" />
+            <File name="jwt-client\npm-debug.log" />
+            <File name="jwt-client\package.json" />
+            <File name="jwt-client\server.d.ts" />
+            <File name="jwt-client\server.js" />
+            <File name="jwt-client\server.js.map" />
+            <File name="jwt-client\server.ts" />
+            <File name="jwt-client\_references.ts" />
+        </Folder>
+        <Folder name="jwt-server">
+            <Folder name="bin">
+                <File name="jwt-server\bin\Microsoft.NodejsTools.WebRole.dll" />
+            </Folder>
+            <Folder name="models">
+                <File name="jwt-server\models\user.js" />
+                <File name="jwt-server\models\user.js.map" />
+                <File name="jwt-server\models\user.ts" />
+            </Folder>
+            <Folder name="mongodb">
+                <File name="jwt-server\mongodb\local.0" />
+                <File name="jwt-server\mongodb\local.ns" />
+                <File name="jwt-server\mongodb\mongod.lock" />
+            </Folder>
+            <Folder name="node_modules">
+                <Folder name="bcrypt-nodejs">
+                    <File name="jwt-server\node_modules\bcrypt-nodejs\.gitattributes" />
+                    <File name="jwt-server\node_modules\bcrypt-nodejs\.npmignore" />
+                    <File name="jwt-server\node_modules\bcrypt-nodejs\bCrypt.js" />
+                    <File name="jwt-server\node_modules\bcrypt-nodejs\LICENSE" />
+                    <File name="jwt-server\node_modules\bcrypt-nodejs\package.json" />
+                    <File name="jwt-server\node_modules\bcrypt-nodejs\README.md" />
+                    <File name="jwt-server\node_modules\bcrypt-nodejs\test-async.js" />
+                    <File name="jwt-server\node_modules\bcrypt-nodejs\test-sync.js" />
+                </Folder>
+                <Folder name="body-parser">
+                    <Folder name="lib">
+                        <Folder name="types">
+                            <File name="jwt-server\node_modules\body-parser\lib\types\json.js" />
+                            <File name="jwt-server\node_modules\body-parser\lib\types\raw.js" />
+                            <File name="jwt-server\node_modules\body-parser\lib\types\text.js" />
+                            <File name="jwt-server\node_modules\body-parser\lib\types\urlencoded.js" />
+                        </Folder>
+                        <File name="jwt-server\node_modules\body-parser\lib\read.js" />
+                    </Folder>
+                    <Folder name="node_modules">
+                        <Folder name="bytes">
+                            <File name="jwt-server\node_modules\body-parser\node_modules\bytes\.npmignore" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\bytes\component.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\bytes\History.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\bytes\index.js" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\bytes\Makefile" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\bytes\package.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\bytes\Readme.md" />
+                        </Folder>
+                        <Folder name="depd">
+                            <Folder name="lib">
+                                <Folder name="compat">
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\depd\lib\compat\buffer-concat.js" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\depd\lib\compat\callsite-tostring.js" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\depd\lib\compat\index.js" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\body-parser\node_modules\depd\History.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\depd\index.js" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\depd\LICENSE" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\depd\package.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\depd\Readme.md" />
+                        </Folder>
+                        <Folder name="iconv-lite">
+                            <Folder name="encodings">
+                                <Folder name="tables">
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\big5-added.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\cp936.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\cp949.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\cp950.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\eucjp.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\gb18030-ranges.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\gbk-added.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\shiftjis.json" />
+                                </Folder>
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\dbcs-codec.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\dbcs-data.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\index.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\internal.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\sbcs-codec.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\sbcs-data-generated.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\sbcs-data.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\utf16.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\encodings\utf7.js" />
+                            </Folder>
+                            <Folder name="lib">
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\lib\extend-node.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\lib\index.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\lib\streams.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\.npmignore" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\.travis.yml" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\Changelog.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\LICENSE" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\package.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\iconv-lite\README.md" />
+                        </Folder>
+                        <Folder name="media-typer">
+                            <File name="jwt-server\node_modules\body-parser\node_modules\media-typer\HISTORY.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\media-typer\index.js" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\media-typer\LICENSE" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\media-typer\package.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\media-typer\README.md" />
+                        </Folder>
+                        <Folder name="on-finished">
+                            <Folder name="node_modules">
+                                <Folder name="ee-first">
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\node_modules\ee-first\index.js" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\node_modules\ee-first\LICENSE" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\node_modules\ee-first\package.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\node_modules\ee-first\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\HISTORY.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\index.js" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\LICENSE" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\package.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\on-finished\README.md" />
+                        </Folder>
+                        <Folder name="qs">
+                            <Folder name="lib">
+                                <File name="jwt-server\node_modules\body-parser\node_modules\qs\lib\index.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\qs\lib\parse.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\qs\lib\stringify.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\qs\lib\utils.js" />
+                            </Folder>
+                            <Folder name="test">
+                                <File name="jwt-server\node_modules\body-parser\node_modules\qs\test\parse.js" />
+                                <File name="jwt-server\node_modules\body-parser\node_modules\qs\test\stringify.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\.jshintignore" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\.jshintrc" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\.npmignore" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\.travis.yml" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\CHANGELOG.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\CONTRIBUTING.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\index.js" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\LICENSE" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\Makefile" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\package.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\qs\README.md" />
+                        </Folder>
+                        <Folder name="raw-body">
+                            <File name="jwt-server\node_modules\body-parser\node_modules\raw-body\.npmignore" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\raw-body\HISTORY.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\raw-body\index.js" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\raw-body\LICENSE" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\raw-body\package.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\raw-body\README.md" />
+                        </Folder>
+                        <Folder name="type-is">
+                            <Folder name="node_modules">
+                                <Folder name="mime-types">
+                                    <Folder name="node_modules">
+                                        <Folder name="mime-db">
+                                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\db.json" />
+                                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\index.js" />
+                                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\LICENSE" />
+                                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\package.json" />
+                                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\README.md" />
+                                        </Folder>
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\HISTORY.md" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\index.js" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\LICENSE" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\package.json" />
+                                    <File name="jwt-server\node_modules\body-parser\node_modules\type-is\node_modules\mime-types\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\HISTORY.md" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\index.js" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\LICENSE" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\package.json" />
+                            <File name="jwt-server\node_modules\body-parser\node_modules\type-is\README.md" />
+                        </Folder>
+                    </Folder>
+                    <File name="jwt-server\node_modules\body-parser\HISTORY.md" />
+                    <File name="jwt-server\node_modules\body-parser\index.js" />
+                    <File name="jwt-server\node_modules\body-parser\LICENSE" />
+                    <File name="jwt-server\node_modules\body-parser\package.json" />
+                    <File name="jwt-server\node_modules\body-parser\README.md" />
+                </Folder>
+                <Folder name="express">
+                    <Folder name="lib">
+                        <Folder name="middleware">
+                            <File name="jwt-server\node_modules\express\lib\middleware\init.js" />
+                            <File name="jwt-server\node_modules\express\lib\middleware\query.js" />
+                        </Folder>
+                        <Folder name="router">
+                            <File name="jwt-server\node_modules\express\lib\router\index.js" />
+                            <File name="jwt-server\node_modules\express\lib\router\layer.js" />
+                            <File name="jwt-server\node_modules\express\lib\router\route.js" />
+                        </Folder>
+                        <File name="jwt-server\node_modules\express\lib\application.js" />
+                        <File name="jwt-server\node_modules\express\lib\express.js" />
+                        <File name="jwt-server\node_modules\express\lib\request.js" />
+                        <File name="jwt-server\node_modules\express\lib\response.js" />
+                        <File name="jwt-server\node_modules\express\lib\utils.js" />
+                        <File name="jwt-server\node_modules\express\lib\view.js" />
+                    </Folder>
+                    <Folder name="node_modules">
+                        <Folder name="accepts">
+                            <Folder name="node_modules">
+                                <Folder name="mime-types">
+                                    <Folder name="node_modules">
+                                        <Folder name="mime-db">
+                                            <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\db.json" />
+                                            <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\index.js" />
+                                            <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\LICENSE" />
+                                            <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\package.json" />
+                                            <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\node_modules\mime-db\README.md" />
+                                        </Folder>
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\HISTORY.md" />
+                                    <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\index.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\LICENSE" />
+                                    <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\mime-types\README.md" />
+                                </Folder>
+                                <Folder name="negotiator">
+                                    <Folder name="lib">
+                                        <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\charset.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\encoding.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\language.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\mediaType.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\negotiator\lib\negotiator.js" />
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\negotiator\LICENSE" />
+                                    <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\negotiator\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\accepts\node_modules\negotiator\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\accepts\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\accepts\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\accepts\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\accepts\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\accepts\README.md" />
+                        </Folder>
+                        <Folder name="content-disposition">
+                            <File name="jwt-server\node_modules\express\node_modules\content-disposition\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\content-disposition\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\content-disposition\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\content-disposition\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\content-disposition\README.md" />
+                        </Folder>
+                        <Folder name="cookie">
+                            <File name="jwt-server\node_modules\express\node_modules\cookie\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie\README.md" />
+                        </Folder>
+                        <Folder name="cookie-signature">
+                            <File name="jwt-server\node_modules\express\node_modules\cookie-signature\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie-signature\History.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie-signature\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie-signature\Makefile" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie-signature\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\cookie-signature\Readme.md" />
+                        </Folder>
+                        <Folder name="debug">
+                            <Folder name="node_modules">
+                                <Folder name="ms">
+                                    <File name="jwt-server\node_modules\express\node_modules\debug\node_modules\ms\.npmignore" />
+                                    <File name="jwt-server\node_modules\express\node_modules\debug\node_modules\ms\index.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\debug\node_modules\ms\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\debug\node_modules\ms\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\debug\.jshintrc" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\browser.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\component.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\debug.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\History.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\Makefile" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\node.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\debug\Readme.md" />
+                        </Folder>
+                        <Folder name="depd">
+                            <Folder name="lib">
+                                <Folder name="compat">
+                                    <File name="jwt-server\node_modules\express\node_modules\depd\lib\compat\buffer-concat.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\depd\lib\compat\callsite-tostring.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\depd\lib\compat\index.js" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\depd\History.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\depd\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\depd\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\depd\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\depd\Readme.md" />
+                        </Folder>
+                        <Folder name="escape-html">
+                            <File name="jwt-server\node_modules\express\node_modules\escape-html\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\escape-html\component.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\escape-html\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\escape-html\Makefile" />
+                            <File name="jwt-server\node_modules\express\node_modules\escape-html\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\escape-html\Readme.md" />
+                        </Folder>
+                        <Folder name="etag">
+                            <Folder name="node_modules">
+                                <Folder name="crc">
+                                    <Folder name="lib">
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc1.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc16.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc16_ccitt.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc16_modbus.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc24.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc32.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc8.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\crc8_1wire.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\create.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\hex.js" />
+                                        <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\lib\index.js" />
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\.npmignore" />
+                                    <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\LICENSE" />
+                                    <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\etag\node_modules\crc\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\etag\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\etag\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\etag\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\etag\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\etag\README.md" />
+                        </Folder>
+                        <Folder name="finalhandler">
+                            <File name="jwt-server\node_modules\express\node_modules\finalhandler\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\finalhandler\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\finalhandler\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\finalhandler\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\finalhandler\README.md" />
+                        </Folder>
+                        <Folder name="fresh">
+                            <File name="jwt-server\node_modules\express\node_modules\fresh\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\fresh\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\fresh\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\fresh\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\fresh\README.md" />
+                        </Folder>
+                        <Folder name="media-typer">
+                            <File name="jwt-server\node_modules\express\node_modules\media-typer\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\media-typer\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\media-typer\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\media-typer\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\media-typer\README.md" />
+                        </Folder>
+                        <Folder name="merge-descriptors">
+                            <File name="jwt-server\node_modules\express\node_modules\merge-descriptors\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\merge-descriptors\component.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\merge-descriptors\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\merge-descriptors\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\merge-descriptors\README.md" />
+                        </Folder>
+                        <Folder name="methods">
+                            <Folder name="test">
+                                <File name="jwt-server\node_modules\express\node_modules\methods\test\methods.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\methods\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\methods\History.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\methods\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\methods\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\methods\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\methods\Readme.md" />
+                        </Folder>
+                        <Folder name="on-finished">
+                            <Folder name="node_modules">
+                                <Folder name="ee-first">
+                                    <File name="jwt-server\node_modules\express\node_modules\on-finished\node_modules\ee-first\index.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\on-finished\node_modules\ee-first\LICENSE" />
+                                    <File name="jwt-server\node_modules\express\node_modules\on-finished\node_modules\ee-first\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\on-finished\node_modules\ee-first\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\on-finished\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\on-finished\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\on-finished\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\on-finished\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\on-finished\README.md" />
+                        </Folder>
+                        <Folder name="parseurl">
+                            <File name="jwt-server\node_modules\express\node_modules\parseurl\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\parseurl\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\parseurl\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\parseurl\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\parseurl\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\parseurl\README.md" />
+                        </Folder>
+                        <Folder name="path-to-regexp">
+                            <File name="jwt-server\node_modules\express\node_modules\path-to-regexp\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\path-to-regexp\component.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\path-to-regexp\History.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\path-to-regexp\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\path-to-regexp\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\path-to-regexp\Readme.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\path-to-regexp\test.js" />
+                        </Folder>
+                        <Folder name="proxy-addr">
+                            <Folder name="node_modules">
+                                <Folder name="forwarded">
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\HISTORY.md" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\index.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\LICENSE" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\forwarded\README.md" />
+                                </Folder>
+                                <Folder name="ipaddr.js">
+                                    <Folder name="lib">
+                                        <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\lib\ipaddr.js" />
+                                    </Folder>
+                                    <Folder name="src">
+                                        <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\src\ipaddr.coffee" />
+                                    </Folder>
+                                    <Folder name="test">
+                                        <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\test\ipaddr.test.coffee" />
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\.npmignore" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\Cakefile" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\ipaddr.min.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\LICENSE" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\proxy-addr\node_modules\ipaddr.js\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\proxy-addr\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\proxy-addr\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\proxy-addr\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\proxy-addr\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\proxy-addr\README.md" />
+                        </Folder>
+                        <Folder name="qs">
+                            <Folder name="lib">
+                                <File name="jwt-server\node_modules\express\node_modules\qs\lib\index.js" />
+                                <File name="jwt-server\node_modules\express\node_modules\qs\lib\parse.js" />
+                                <File name="jwt-server\node_modules\express\node_modules\qs\lib\stringify.js" />
+                                <File name="jwt-server\node_modules\express\node_modules\qs\lib\utils.js" />
+                            </Folder>
+                            <Folder name="test">
+                                <File name="jwt-server\node_modules\express\node_modules\qs\test\parse.js" />
+                                <File name="jwt-server\node_modules\express\node_modules\qs\test\stringify.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\qs\.jshintignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\.jshintrc" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\.travis.yml" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\CHANGELOG.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\CONTRIBUTING.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\Makefile" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\qs\README.md" />
+                        </Folder>
+                        <Folder name="range-parser">
+                            <File name="jwt-server\node_modules\express\node_modules\range-parser\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\range-parser\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\range-parser\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\range-parser\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\range-parser\README.md" />
+                        </Folder>
+                        <Folder name="send">
+                            <Folder name="node_modules">
+                                <Folder name="destroy">
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\destroy\index.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\destroy\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\destroy\README.md" />
+                                </Folder>
+                                <Folder name="mime">
+                                    <Folder name="types">
+                                        <File name="jwt-server\node_modules\express\node_modules\send\node_modules\mime\types\mime.types" />
+                                        <File name="jwt-server\node_modules\express\node_modules\send\node_modules\mime\types\node.types" />
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\mime\LICENSE" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\mime\mime.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\mime\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\mime\README.md" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\mime\test.js" />
+                                </Folder>
+                                <Folder name="ms">
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\ms\.npmignore" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\ms\index.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\ms\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\send\node_modules\ms\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\send\History.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\send\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\send\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\send\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\send\Readme.md" />
+                        </Folder>
+                        <Folder name="serve-static">
+                            <File name="jwt-server\node_modules\express\node_modules\serve-static\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\serve-static\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\serve-static\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\serve-static\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\serve-static\README.md" />
+                        </Folder>
+                        <Folder name="type-is">
+                            <Folder name="node_modules">
+                                <Folder name="mime-types">
+                                    <Folder name="node_modules">
+                                        <Folder name="mime-db">
+                                            <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\db.json" />
+                                            <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\index.js" />
+                                            <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\LICENSE" />
+                                            <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\package.json" />
+                                            <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\node_modules\mime-db\README.md" />
+                                        </Folder>
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\HISTORY.md" />
+                                    <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\index.js" />
+                                    <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\LICENSE" />
+                                    <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\package.json" />
+                                    <File name="jwt-server\node_modules\express\node_modules\type-is\node_modules\mime-types\README.md" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\express\node_modules\type-is\HISTORY.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\type-is\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\type-is\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\type-is\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\type-is\README.md" />
+                        </Folder>
+                        <Folder name="utils-merge">
+                            <File name="jwt-server\node_modules\express\node_modules\utils-merge\.travis.yml" />
+                            <File name="jwt-server\node_modules\express\node_modules\utils-merge\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\utils-merge\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\utils-merge\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\utils-merge\README.md" />
+                        </Folder>
+                        <Folder name="vary">
+                            <File name="jwt-server\node_modules\express\node_modules\vary\.npmignore" />
+                            <File name="jwt-server\node_modules\express\node_modules\vary\History.md" />
+                            <File name="jwt-server\node_modules\express\node_modules\vary\index.js" />
+                            <File name="jwt-server\node_modules\express\node_modules\vary\LICENSE" />
+                            <File name="jwt-server\node_modules\express\node_modules\vary\package.json" />
+                            <File name="jwt-server\node_modules\express\node_modules\vary\README.md" />
+                        </Folder>
+                    </Folder>
+                    <File name="jwt-server\node_modules\express\History.md" />
+                    <File name="jwt-server\node_modules\express\index.js" />
+                    <File name="jwt-server\node_modules\express\LICENSE" />
+                    <File name="jwt-server\node_modules\express\package.json" />
+                    <File name="jwt-server\node_modules\express\Readme.md" />
+                </Folder>
+                <Folder name="mongoose">
+                    <Folder name="examples">
+                        <Folder name="aggregate">
+                            <File name="jwt-server\node_modules\mongoose\examples\aggregate\aggregate.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\aggregate\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\examples\aggregate\person.js" />
+                        </Folder>
+                        <Folder name="express">
+                            <Folder name="connection-sharing">
+                                <File name="jwt-server\node_modules\mongoose\examples\express\connection-sharing\app.js" />
+                                <File name="jwt-server\node_modules\mongoose\examples\express\connection-sharing\modelA.js" />
+                                <File name="jwt-server\node_modules\mongoose\examples\express\connection-sharing\package.json" />
+                                <File name="jwt-server\node_modules\mongoose\examples\express\connection-sharing\README.md" />
+                                <File name="jwt-server\node_modules\mongoose\examples\express\connection-sharing\routes.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\examples\express\README.md" />
+                        </Folder>
+                        <Folder name="geospatial">
+                            <File name="jwt-server\node_modules\mongoose\examples\geospatial\geoJSONexample.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\geospatial\geoJSONSchema.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\geospatial\geospatial.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\geospatial\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\examples\geospatial\person.js" />
+                        </Folder>
+                        <Folder name="globalschemas">
+                            <File name="jwt-server\node_modules\mongoose\examples\globalschemas\gs_example.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\globalschemas\person.js" />
+                        </Folder>
+                        <Folder name="lean">
+                            <File name="jwt-server\node_modules\mongoose\examples\lean\lean.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\lean\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\examples\lean\person.js" />
+                        </Folder>
+                        <Folder name="mapreduce">
+                            <File name="jwt-server\node_modules\mongoose\examples\mapreduce\mapreduce.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\mapreduce\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\examples\mapreduce\person.js" />
+                        </Folder>
+                        <Folder name="population">
+                            <File name="jwt-server\node_modules\mongoose\examples\population\population-across-three-collections.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\population\population-basic.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\population\population-of-existing-doc.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\population\population-of-multiple-existing-docs.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\population\population-options.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\population\population-plain-objects.js" />
+                        </Folder>
+                        <Folder name="promises">
+                            <File name="jwt-server\node_modules\mongoose\examples\promises\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\examples\promises\person.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\promises\promise.js" />
+                        </Folder>
+                        <Folder name="querybuilder">
+                            <File name="jwt-server\node_modules\mongoose\examples\querybuilder\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\examples\querybuilder\person.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\querybuilder\querybuilder.js" />
+                        </Folder>
+                        <Folder name="replicasets">
+                            <File name="jwt-server\node_modules\mongoose\examples\replicasets\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\examples\replicasets\person.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\replicasets\replica-sets.js" />
+                        </Folder>
+                        <Folder name="schema">
+                            <Folder name="storing-schemas-as-json">
+                                <File name="jwt-server\node_modules\mongoose\examples\schema\storing-schemas-as-json\index.js" />
+                                <File name="jwt-server\node_modules\mongoose\examples\schema\storing-schemas-as-json\schema.json" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\examples\schema\schema.js" />
+                        </Folder>
+                        <Folder name="statics">
+                            <File name="jwt-server\node_modules\mongoose\examples\statics\person.js" />
+                            <File name="jwt-server\node_modules\mongoose\examples\statics\statics.js" />
+                        </Folder>
+                        <File name="jwt-server\node_modules\mongoose\examples\doc-methods.js" />
+                        <File name="jwt-server\node_modules\mongoose\examples\README.md" />
+                    </Folder>
+                    <Folder name="lib">
+                        <Folder name="drivers">
+                            <Folder name="node-mongodb-native">
+                                <File name="jwt-server\node_modules\mongoose\lib\drivers\node-mongodb-native\binary.js" />
+                                <File name="jwt-server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js" />
+                                <File name="jwt-server\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js" />
+                                <File name="jwt-server\node_modules\mongoose\lib\drivers\node-mongodb-native\objectid.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\lib\drivers\SPEC.md" />
+                        </Folder>
+                        <Folder name="error">
+                            <File name="jwt-server\node_modules\mongoose\lib\error\cast.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\error\divergentArray.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\error\messages.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\error\missingSchema.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\error\overwriteModel.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\error\validation.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\error\validator.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\error\version.js" />
+                        </Folder>
+                        <Folder name="schema">
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\array.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\boolean.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\buffer.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\date.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\documentarray.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\index.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\mixed.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\number.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\objectid.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\schema\string.js" />
+                        </Folder>
+                        <Folder name="types">
+                            <File name="jwt-server\node_modules\mongoose\lib\types\array.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\types\buffer.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\types\documentarray.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\types\embedded.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\types\index.js" />
+                            <File name="jwt-server\node_modules\mongoose\lib\types\objectid.js" />
+                        </Folder>
+                        <File name="jwt-server\node_modules\mongoose\lib\aggregate.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\collection.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\connection.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\connectionstate.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\document.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\error.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\index.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\internal.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\model.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\promise.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\query.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\queryhelpers.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\querystream.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\schema.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\schemadefault.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\schematype.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\statemachine.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\utils.js" />
+                        <File name="jwt-server\node_modules\mongoose\lib\virtualtype.js" />
+                    </Folder>
+                    <Folder name="node_modules">
+                        <Folder name="hooks">
+                            <File name="jwt-server\node_modules\mongoose\node_modules\hooks\.npmignore" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\hooks\hooks.alt.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\hooks\hooks.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\hooks\Makefile" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\hooks\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\hooks\README.md" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\hooks\test.js" />
+                        </Folder>
+                        <Folder name="mongodb">
+                            <Folder name="lib">
+                                <Folder name="mongodb">
+                                    <Folder name="auth">
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_cr.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_gssapi.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_plain.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_scram.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_sspi.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_x509.js" />
+                                    </Folder>
+                                    <Folder name="collection">
+                                        <Folder name="batch">
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\batch\common.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\batch\ordered.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\batch\unordered.js" />
+                                        </Folder>
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\aggregation.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\commands.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\core.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\geo.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\index.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\query.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection\shared.js" />
+                                    </Folder>
+                                    <Folder name="commands">
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\base_command.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\db_command.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\delete_command.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\get_more_command.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\insert_command.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\kill_cursor_command.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\query_command.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\update_command.js" />
+                                    </Folder>
+                                    <Folder name="connection">
+                                        <Folder name="repl_set">
+                                            <Folder name="strategies">
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\strategies\ping_strategy.js" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\strategies\statistics_strategy.js" />
+                                            </Folder>
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\ha.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\options.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\repl_set.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\repl_set_state.js" />
+                                        </Folder>
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\base.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\connection.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\connection_pool.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\connection_utils.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\mongos.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\read_preference.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\server.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\server_capabilities.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\url_parser.js" />
+                                    </Folder>
+                                    <Folder name="gridfs">
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\gridfs\chunk.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\gridfs\grid.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\gridfs\gridstore.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\gridfs\readstream.js" />
+                                    </Folder>
+                                    <Folder name="responses">
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\responses\mongo_reply.js" />
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\admin.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\aggregation_cursor.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\command_cursor.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\cursor.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\cursorstream.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\db.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\index.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\mongo_client.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\scope.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\lib\mongodb\utils.js" />
+                                </Folder>
+                            </Folder>
+                            <Folder name="node_modules">
+                                <Folder name="bson">
+                                    <Folder name="browser_build">
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\browser_build\bson.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\browser_build\package.json" />
+                                    </Folder>
+                                    <Folder name="build">
+                                        <Folder name="Release">
+                                            <Folder name="obj">
+                                                <Folder name="bson">
+                                                    <Folder name="bson.tlog">
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.tlog\bson.lastbuildstate" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.tlog\bson.write.1u.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.tlog\cl.command.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.tlog\CL.read.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.tlog\CL.write.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.tlog\link.command.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.tlog\link.read.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.tlog\link.write.1.tlog" />
+                                                    </Folder>
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\bson.obj" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\obj\bson\vc120.pdb" />
+                                                </Folder>
+                                            </Folder>
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\bson.exp" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\bson.lib" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\bson.node" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\Release\bson.pdb" />
+                                        </Folder>
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\binding.sln" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\bson.vcxproj" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\bson.vcxproj.filters" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build\config.gypi" />
+                                    </Folder>
+                                    <Folder name="ext">
+                                        <Folder name="win32">
+                                            <Folder name="ia32">
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\win32\ia32\bson.node" />
+                                            </Folder>
+                                            <Folder name="x64">
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\win32\x64\bson.node" />
+                                            </Folder>
+                                        </Folder>
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\bson.cc" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\bson.h" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\index.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\Makefile" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\wscript" />
+                                    </Folder>
+                                    <Folder name="lib">
+                                        <Folder name="bson">
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\binary.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\binary_parser.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\bson.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\bson_new.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\code.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\db_ref.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\double.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\float_parser.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\index.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\long.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\max_key.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\min_key.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\objectid.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\symbol.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\timestamp.js" />
+                                        </Folder>
+                                    </Folder>
+                                    <Folder name="node_modules">
+                                        <Folder name="nan">
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\node_modules\nan\.dntrc" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\node_modules\nan\appveyor.yml" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\node_modules\nan\CHANGELOG.md" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\node_modules\nan\include_dirs.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\node_modules\nan\LICENSE" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\node_modules\nan\nan.h" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\node_modules\nan\package.json" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\node_modules\nan\README.md" />
+                                        </Folder>
+                                    </Folder>
+                                    <Folder name="tools">
+                                        <Folder name="jasmine-1.1.0">
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\jasmine-html.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\jasmine.css" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\jasmine.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\jasmine_favicon.png" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\MIT.LICENSE" />
+                                        </Folder>
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\gleak.js" />
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\.travis.yml" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\binding.gyp" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\builderror.log" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build_browser.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\LICENSE" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\Makefile" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\package.json" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\README.md" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\bson\testcases.js" />
+                                </Folder>
+                                <Folder name="kerberos">
+                                    <Folder name="build">
+                                        <Folder name="Release">
+                                            <Folder name="obj">
+                                                <Folder name="kerberos">
+                                                    <Folder name="kerberos.tlog">
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.tlog\cl.command.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.tlog\CL.read.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.tlog\cl.write.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.tlog\kerberos.lastbuildstate" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.tlog\kerberos.write.1u.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.tlog\link.command.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.tlog\link.read.1.tlog" />
+                                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.tlog\link.write.1.tlog" />
+                                                    </Folder>
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\base64.obj" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos.obj" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\kerberos_sspi.obj" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\security_buffer.obj" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\security_buffer_descriptor.obj" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\security_context.obj" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\security_credentials.obj" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\vc120.pdb" />
+                                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\obj\kerberos\worker.obj" />
+                                                </Folder>
+                                            </Folder>
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\kerberos.exp" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\kerberos.lib" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\kerberos.node" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\Release\kerberos.pdb" />
+                                        </Folder>
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\binding.sln" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\config.gypi" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\kerberos.vcxproj" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\build\kerberos.vcxproj.filters" />
+                                    </Folder>
+                                    <Folder name="lib">
+                                        <Folder name="auth_processes">
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\auth_processes\mongodb.js" />
+                                        </Folder>
+                                        <Folder name="win32">
+                                            <Folder name="wrappers">
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer.cc" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer.h" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer.js" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer_descriptor.cc" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer_descriptor.h" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer_descriptor.js" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_context.cc" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_context.h" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_context.js" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_credentials.cc" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_credentials.h" />
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_credentials.js" />
+                                            </Folder>
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\base64.c" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\base64.h" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\kerberos.cc" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\kerberos.h" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\kerberos_sspi.c" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\kerberos_sspi.h" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\worker.cc" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\worker.h" />
+                                        </Folder>
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\base64.c" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\base64.h" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos.cc" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos.h" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberosgss.c" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberosgss.h" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos_context.cc" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos_context.h" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\sspi.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\worker.cc" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\worker.h" />
+                                    </Folder>
+                                    <Folder name="test">
+                                        <Folder name="win32">
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\win32\security_buffer_descriptor_tests.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\win32\security_buffer_tests.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\win32\security_credentials_tests.js" />
+                                        </Folder>
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\kerberos_tests.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\kerberos_win32_test.js" />
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\binding.gyp" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\builderror.log" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\index.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\LICENSE" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\package.json" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\README.md" />
+                                </Folder>
+                                <Folder name="readable-stream">
+                                    <Folder name="lib">
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\lib\_stream_duplex.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\lib\_stream_passthrough.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\lib\_stream_readable.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\lib\_stream_transform.js" />
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\lib\_stream_writable.js" />
+                                    </Folder>
+                                    <Folder name="node_modules">
+                                        <Folder name="core-util-is">
+                                            <Folder name="lib">
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\core-util-is\lib\util.js" />
+                                            </Folder>
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\core-util-is\float.patch" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\core-util-is\package.json" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\core-util-is\README.md" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\core-util-is\util.js" />
+                                        </Folder>
+                                        <Folder name="inherits">
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\inherits\inherits.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\inherits\inherits_browser.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\inherits\LICENSE" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\inherits\package.json" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\inherits\README.md" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\inherits\test.js" />
+                                        </Folder>
+                                        <Folder name="isarray">
+                                            <Folder name="build">
+                                                <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\isarray\build\build.js" />
+                                            </Folder>
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\isarray\component.json" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\isarray\index.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\isarray\package.json" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\isarray\README.md" />
+                                        </Folder>
+                                        <Folder name="string_decoder">
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\string_decoder\.npmignore" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\string_decoder\index.js" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\string_decoder\LICENSE" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\string_decoder\package.json" />
+                                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\node_modules\string_decoder\README.md" />
+                                        </Folder>
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\.npmignore" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\duplex.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\LICENSE" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\package.json" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\passthrough.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\readable.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\README.md" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\transform.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\node_modules\readable-stream\writable.js" />
+                                </Folder>
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\.gitmodules" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\.travis.yml" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\CONTRIBUTING.md" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\index.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\LICENSE" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\Makefile" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mongodb\Readme.md" />
+                        </Folder>
+                        <Folder name="mpath">
+                            <Folder name="lib">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpath\lib\index.js" />
+                            </Folder>
+                            <Folder name="test">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpath\test\index.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpath\.npmignore" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpath\.travis.yml" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpath\History.md" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpath\index.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpath\LICENSE" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpath\Makefile" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpath\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpath\README.md" />
+                        </Folder>
+                        <Folder name="mpromise">
+                            <Folder name=".idea">
+                                <Folder name="inspectionProfiles">
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\inspectionProfiles\profiles_settings.xml" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\inspectionProfiles\Project_Default.xml" />
+                                </Folder>
+                                <Folder name="libraries">
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\libraries\Node_js_Dependencies_for_mpromise.xml" />
+                                </Folder>
+                                <Folder name="scopes">
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\scopes\scope_settings.xml" />
+                                </Folder>
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\.name" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\codeStyleSettings.xml" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\encodings.xml" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\jsLibraryMappings.xml" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\misc.xml" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\modules.xml" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\mpromise.iml" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\other.xml" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\vcs.xml" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.idea\workspace.xml" />
+                            </Folder>
+                            <Folder name="lib">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\lib\promise.js" />
+                            </Folder>
+                            <Folder name="test">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\test\promise.domain.test.js" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\test\promise.test.js" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\test\promises.Aplus.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.npmignore" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\.travis.yml" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\History.md" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\index.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\LICENSE" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mpromise\README.md" />
+                        </Folder>
+                        <Folder name="mquery">
+                            <Folder name="lib">
+                                <Folder name="collection">
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\lib\collection\collection.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\lib\collection\index.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\lib\collection\node.js" />
+                                </Folder>
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mquery\lib\env.js" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mquery\lib\mquery.js" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mquery\lib\permissions.js" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mquery\lib\utils.js" />
+                            </Folder>
+                            <Folder name="node_modules">
+                                <Folder name="debug">
+                                    <Folder name="lib">
+                                        <File name="jwt-server\node_modules\mongoose\node_modules\mquery\node_modules\debug\lib\debug.js" />
+                                    </Folder>
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\node_modules\debug\debug.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\node_modules\debug\index.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\node_modules\debug\package.json" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\node_modules\debug\Readme.md" />
+                                </Folder>
+                            </Folder>
+                            <Folder name="test">
+                                <Folder name="collection">
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\test\collection\browser.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\test\collection\mongo.js" />
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\mquery\test\collection\node.js" />
+                                </Folder>
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mquery\test\env.js" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mquery\test\index.js" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mquery\test\utils.js" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\mquery\test\utils.test.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mquery\.npmignore" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mquery\.travis.yml" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mquery\History.md" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mquery\LICENSE" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mquery\Makefile" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mquery\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\mquery\README.md" />
+                        </Folder>
+                        <Folder name="ms">
+                            <Folder name="test">
+                                <Folder name="support">
+                                    <File name="jwt-server\node_modules\mongoose\node_modules\ms\test\support\jquery.js" />
+                                </Folder>
+                                <File name="jwt-server\node_modules\mongoose\node_modules\ms\test\index.html" />
+                                <File name="jwt-server\node_modules\mongoose\node_modules\ms\test\test.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\node_modules\ms\.npmignore" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\ms\Makefile" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\ms\ms.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\ms\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\ms\README.md" />
+                        </Folder>
+                        <Folder name="muri">
+                            <Folder name="lib">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\muri\lib\index.js" />
+                            </Folder>
+                            <Folder name="test">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\muri\test\index.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\node_modules\muri\.npmignore" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\muri\.travis.yml" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\muri\History.md" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\muri\index.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\muri\LICENSE" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\muri\Makefile" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\muri\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\muri\README.md" />
+                        </Folder>
+                        <Folder name="regexp-clone">
+                            <Folder name="test">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\test\index.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\.npmignore" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\.travis.yml" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\History.md" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\index.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\LICENSE" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\Makefile" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\regexp-clone\README.md" />
+                        </Folder>
+                        <Folder name="sliced">
+                            <Folder name="lib">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\sliced\lib\sliced.js" />
+                            </Folder>
+                            <Folder name="test">
+                                <File name="jwt-server\node_modules\mongoose\node_modules\sliced\test\index.js" />
+                            </Folder>
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\.npmignore" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\.travis.yml" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\bench.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\component.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\History.md" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\index.js" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\LICENSE" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\Makefile" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\package.json" />
+                            <File name="jwt-server\node_modules\mongoose\node_modules\sliced\README.md" />
+                        </Folder>
+                    </Folder>
+                    <File name="jwt-server\node_modules\mongoose\.npmignore" />
+                    <File name="jwt-server\node_modules\mongoose\.travis.yml" />
+                    <File name="jwt-server\node_modules\mongoose\CONTRIBUTING.md" />
+                    <File name="jwt-server\node_modules\mongoose\contRun.sh" />
+                    <File name="jwt-server\node_modules\mongoose\History.md" />
+                    <File name="jwt-server\node_modules\mongoose\index.js" />
+                    <File name="jwt-server\node_modules\mongoose\package.json" />
+                    <File name="jwt-server\node_modules\mongoose\README.md" />
+                    <File name="jwt-server\node_modules\mongoose\release-items.md" />
+                    <File name="jwt-server\node_modules\mongoose\static.js" />
+                    <File name="jwt-server\node_modules\mongoose\website.js" />
+                </Folder>
+            </Folder>
+            <Folder name="obj">
+                <Folder name="Debug">
+                    <File name="jwt-server\obj\Debug\jwt-server.njsproj.FileListAbsolute.txt" />
+                    <File name="jwt-server\obj\Debug\jwt-server.njsprojResolveAssemblyReference.cache" />
+                </Folder>
+            </Folder>
+            <Folder name="Scripts">
+                <Folder name="typings">
+                    <Folder name="body-parser">
+                        <File name="jwt-server\Scripts\typings\body-parser\body-parser.d.ts" />
+                    </Folder>
+                    <Folder name="express">
+                        <File name="jwt-server\Scripts\typings\express\express.d.ts" />
+                    </Folder>
+                    <Folder name="express-jwt">
+                        <File name="jwt-server\Scripts\typings\express-jwt\express-jwt.d.ts" />
+                    </Folder>
+                    <Folder name="express-unless">
+                        <File name="jwt-server\Scripts\typings\express-unless\express-unless.d.ts" />
+                    </Folder>
+                    <Folder name="mongoose">
+                        <File name="jwt-server\Scripts\typings\mongoose\mongoose.d.ts" />
+                    </Folder>
+                    <Folder name="node">
+                        <File name="jwt-server\Scripts\typings\node\node.d.ts" />
+                    </Folder>
+                </Folder>
+                <File name="jwt-server\Scripts\bcrypt-node.d.ts" />
+            </Folder>
+            <File name="jwt-server\.ntvs_analysis.dat" />
+            <File name="jwt-server\db.js" />
+            <File name="jwt-server\db.js.map" />
+            <File name="jwt-server\db.ts" />
+            <File name="jwt-server\jwt-server.njsproj" />
+            <File name="jwt-server\jwt-server.v12.suo" />
+            <File name="jwt-server\mongo" />
+            <File name="jwt-server\mongod" />
+            <File name="jwt-server\package.json" />
+            <File name="jwt-server\README.md" />
+            <File name="jwt-server\server.js" />
+            <File name="jwt-server\server.js.map" />
+            <File name="jwt-server\server.ts" />
+            <File name="jwt-server\_references.js" />
+            <File name="jwt-server\_references.js.map" />
+            <File name="jwt-server\_references.ts" />
+        </Folder>
+        <Folder name="packages">
+            <Folder name="angular-ui.TypeScript.DefinitelyTyped.0.9.3">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="angular-ui">
+                                <File name="packages\angular-ui.TypeScript.DefinitelyTyped.0.9.3\Content\Scripts\typings\angular-ui\angular-ui-router.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\angular-ui.TypeScript.DefinitelyTyped.0.9.3\angular-ui.TypeScript.DefinitelyTyped.0.9.3.nupkg" />
+            </Folder>
+            <Folder name="Angular.UI.UI-Router.0.2.13">
+                <Folder name="content">
+                    <Folder name="scripts">
+                        <File name="packages\Angular.UI.UI-Router.0.2.13\content\scripts\angular-ui-router.js" />
+                        <File name="packages\Angular.UI.UI-Router.0.2.13\content\scripts\angular-ui-router.min.js" />
+                    </Folder>
+                </Folder>
+                <File name="packages\Angular.UI.UI-Router.0.2.13\Angular.UI.UI-Router.0.2.13.nupkg" />
+            </Folder>
+            <Folder name="AngularJS.Core.1.3.4">
+                <Folder name="content">
+                    <Folder name="scripts">
+                        <File name="packages\AngularJS.Core.1.3.4\content\scripts\angular-mocks.js" />
+                        <File name="packages\AngularJS.Core.1.3.4\content\scripts\angular.js" />
+                        <File name="packages\AngularJS.Core.1.3.4\content\scripts\angular.min.js" />
+                        <File name="packages\AngularJS.Core.1.3.4\content\scripts\angular.min.js.map" />
+                    </Folder>
+                </Folder>
+                <File name="packages\AngularJS.Core.1.3.4\AngularJS.Core.1.3.4.nupkg" />
+            </Folder>
+            <Folder name="angularjs.TypeScript.DefinitelyTyped.2.2.4">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="angularjs">
+                                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\Content\Scripts\typings\angularjs\angular-animate.d.ts" />
+                                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\Content\Scripts\typings\angularjs\angular-cookies.d.ts" />
+                                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\Content\Scripts\typings\angularjs\angular-mocks.d.ts" />
+                                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\Content\Scripts\typings\angularjs\angular-resource.d.ts" />
+                                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\Content\Scripts\typings\angularjs\angular-route.d.ts" />
+                                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\Content\Scripts\typings\angularjs\angular-sanitize.d.ts" />
+                                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\Content\Scripts\typings\angularjs\angular-scenario.d.ts" />
+                                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\Content\Scripts\typings\angularjs\angular.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\angularjs.TypeScript.DefinitelyTyped.2.2.4\angularjs.TypeScript.DefinitelyTyped.2.2.4.nupkg" />
+            </Folder>
+            <Folder name="bcrypt.TypeScript.DefinitelyTyped.0.0.1">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="bcrypt">
+                                <File name="packages\bcrypt.TypeScript.DefinitelyTyped.0.0.1\Content\Scripts\typings\bcrypt\bcrypt.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\bcrypt.TypeScript.DefinitelyTyped.0.0.1\bcrypt.TypeScript.DefinitelyTyped.0.0.1.nupkg" />
+            </Folder>
+            <Folder name="body-parser.TypeScript.DefinitelyTyped.0.0.2">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="body-parser">
+                                <File name="packages\body-parser.TypeScript.DefinitelyTyped.0.0.2\Content\Scripts\typings\body-parser\body-parser.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\body-parser.TypeScript.DefinitelyTyped.0.0.2\body-parser.TypeScript.DefinitelyTyped.0.0.2.nupkg" />
+            </Folder>
+            <Folder name="bootstrap.3.3.1">
+                <Folder name="content">
+                    <Folder name="Content">
+                        <File name="packages\bootstrap.3.3.1\content\Content\bootstrap-theme.css" />
+                        <File name="packages\bootstrap.3.3.1\content\Content\bootstrap-theme.css.map" />
+                        <File name="packages\bootstrap.3.3.1\content\Content\bootstrap-theme.min.css" />
+                        <File name="packages\bootstrap.3.3.1\content\Content\bootstrap.css" />
+                        <File name="packages\bootstrap.3.3.1\content\Content\bootstrap.css.map" />
+                        <File name="packages\bootstrap.3.3.1\content\Content\bootstrap.min.css" />
+                    </Folder>
+                    <Folder name="fonts">
+                        <File name="packages\bootstrap.3.3.1\content\fonts\glyphicons-halflings-regular.eot" />
+                        <File name="packages\bootstrap.3.3.1\content\fonts\glyphicons-halflings-regular.svg" />
+                        <File name="packages\bootstrap.3.3.1\content\fonts\glyphicons-halflings-regular.ttf" />
+                        <File name="packages\bootstrap.3.3.1\content\fonts\glyphicons-halflings-regular.woff" />
+                    </Folder>
+                    <Folder name="Scripts">
+                        <File name="packages\bootstrap.3.3.1\content\Scripts\bootstrap.js" />
+                        <File name="packages\bootstrap.3.3.1\content\Scripts\bootstrap.min.js" />
+                        <File name="packages\bootstrap.3.3.1\content\Scripts\npm.js" />
+                    </Folder>
+                </Folder>
+                <File name="packages\bootstrap.3.3.1\bootstrap.3.3.1.nupkg" />
+            </Folder>
+            <Folder name="express-jwt.TypeScript.DefinitelyTyped.0.0.2">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="express-jwt">
+                                <File name="packages\express-jwt.TypeScript.DefinitelyTyped.0.0.2\Content\Scripts\typings\express-jwt\express-jwt.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\express-jwt.TypeScript.DefinitelyTyped.0.0.2\express-jwt.TypeScript.DefinitelyTyped.0.0.2.nupkg" />
+            </Folder>
+            <Folder name="express-unless.TypeScript.DefinitelyTyped.0.0.1">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="express-unless">
+                                <File name="packages\express-unless.TypeScript.DefinitelyTyped.0.0.1\Content\Scripts\typings\express-unless\express-unless.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\express-unless.TypeScript.DefinitelyTyped.0.0.1\express-unless.TypeScript.DefinitelyTyped.0.0.1.nupkg" />
+            </Folder>
+            <Folder name="express.TypeScript.DefinitelyTyped.1.1.3">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="express">
+                                <File name="packages\express.TypeScript.DefinitelyTyped.1.1.3\Content\Scripts\typings\express\express.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\express.TypeScript.DefinitelyTyped.1.1.3\express.TypeScript.DefinitelyTyped.1.1.3.nupkg" />
+            </Folder>
+            <Folder name="jQuery.1.11.1">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <File name="packages\jQuery.1.11.1\Content\Scripts\jquery-1.11.1-vsdoc.js" />
+                        <File name="packages\jQuery.1.11.1\Content\Scripts\jquery-1.11.1.js" />
+                        <File name="packages\jQuery.1.11.1\Content\Scripts\jquery-1.11.1.min.js" />
+                        <File name="packages\jQuery.1.11.1\Content\Scripts\jquery-1.11.1.min.map" />
+                    </Folder>
+                </Folder>
+                <Folder name="Tools">
+                    <File name="packages\jQuery.1.11.1\Tools\common.ps1" />
+                    <File name="packages\jQuery.1.11.1\Tools\install.ps1" />
+                    <File name="packages\jQuery.1.11.1\Tools\jquery-1.11.1.intellisense.js" />
+                    <File name="packages\jQuery.1.11.1\Tools\uninstall.ps1" />
+                </Folder>
+                <File name="packages\jQuery.1.11.1\jQuery.1.11.1.nupkg" />
+            </Folder>
+            <Folder name="jQuery.1.9.0">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <File name="packages\jQuery.1.9.0\Content\Scripts\jquery-1.9.0-vsdoc.js" />
+                        <File name="packages\jQuery.1.9.0\Content\Scripts\jquery-1.9.0.js" />
+                        <File name="packages\jQuery.1.9.0\Content\Scripts\jquery-1.9.0.min.js" />
+                        <File name="packages\jQuery.1.9.0\Content\Scripts\jquery-1.9.0.min.map" />
+                    </Folder>
+                </Folder>
+                <Folder name="Tools">
+                    <File name="packages\jQuery.1.9.0\Tools\common.ps1" />
+                    <File name="packages\jQuery.1.9.0\Tools\install.ps1" />
+                    <File name="packages\jQuery.1.9.0\Tools\jquery-1.9.0.intellisense.js" />
+                    <File name="packages\jQuery.1.9.0\Tools\uninstall.ps1" />
+                </Folder>
+                <File name="packages\jQuery.1.9.0\jQuery.1.9.0.nupkg" />
+            </Folder>
+            <Folder name="jquery.TypeScript.DefinitelyTyped.1.4.1">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="jquery">
+                                <File name="packages\jquery.TypeScript.DefinitelyTyped.1.4.1\Content\Scripts\typings\jquery\jquery.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\jquery.TypeScript.DefinitelyTyped.1.4.1\jquery.TypeScript.DefinitelyTyped.1.4.1.nupkg" />
+            </Folder>
+            <Folder name="mongoose.TypeScript.DefinitelyTyped.0.0.2">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="mongoose">
+                                <File name="packages\mongoose.TypeScript.DefinitelyTyped.0.0.2\Content\Scripts\typings\mongoose\mongoose.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\mongoose.TypeScript.DefinitelyTyped.0.0.2\mongoose.TypeScript.DefinitelyTyped.0.0.2.nupkg" />
+            </Folder>
+            <Folder name="node.TypeScript.DefinitelyTyped.0.7.7">
+                <Folder name="Content">
+                    <Folder name="Scripts">
+                        <Folder name="typings">
+                            <Folder name="node">
+                                <File name="packages\node.TypeScript.DefinitelyTyped.0.7.7\Content\Scripts\typings\node\node-0.11.d.ts" />
+                                <File name="packages\node.TypeScript.DefinitelyTyped.0.7.7\Content\Scripts\typings\node\node-0.8.8.d.ts" />
+                                <File name="packages\node.TypeScript.DefinitelyTyped.0.7.7\Content\Scripts\typings\node\node.d.ts" />
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <File name="packages\node.TypeScript.DefinitelyTyped.0.7.7\node.TypeScript.DefinitelyTyped.0.7.7.nupkg" />
+            </Folder>
+            <Folder name="toastr.2.1.0">
+                <Folder name="content">
+                    <Folder name="content">
+                        <File name="packages\toastr.2.1.0\content\content\toastr.css" />
+                        <File name="packages\toastr.2.1.0\content\content\toastr.less" />
+                        <File name="packages\toastr.2.1.0\content\content\toastr.min.css" />
+                        <File name="packages\toastr.2.1.0\content\content\toastr.scss" />
+                    </Folder>
+                    <Folder name="scripts">
+                        <File name="packages\toastr.2.1.0\content\scripts\toastr.js" />
+                        <File name="packages\toastr.2.1.0\content\scripts\toastr.min.js" />
+                    </Folder>
+                </Folder>
+                <File name="packages\toastr.2.1.0\toastr.2.1.0.nupkg" />
+            </Folder>
+        </Folder>
+        <File name="jwt-frontend.sln" />
+        <File name="jwt-frontend.suo" />
+        <File name="jwt-frontend.v12.suo" />
+        <File name="jwt.sln" />
+        <File name="jwt.v12.suo" />
+        <File name="prj" />
+    </Project>
+    <Project name="download" />
+</NotepadPlus>

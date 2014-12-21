@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>jwt-frontend</Name>
+    <RootNamespace>jwt</RootNamespace>
+    <ToolsVersionPromptShown>1.1</ToolsVersionPromptShown>
+    <TypeScriptToolsVersion>1.1</TypeScriptToolsVersion>
+    <NodeExeArguments>
+    </NodeExeArguments>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6c06469d-490e-425a-8863-58fda03b4dfd</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>
+	server.js
+    </StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\app.html" />
+    <Content Include="app\views\header\header.html" />
+    <Content Include="app\views\jobs\jobs.html" />
+    <Content Include="app\views\login\login.html" />
+    <Content Include="app\views\main\main.html" />
+    <Content Include="app\views\register\register.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="package.json" />
+    <Content Include="Scripts\jquery-1.11.1.min.map" />
+    <Content Include="styles\bootstrap-theme.css" />
+    <Content Include="styles\bootstrap-theme.css.map" />
+    <Content Include="styles\bootstrap-theme.min.css" />
+    <Content Include="styles\bootstrap.css" />
+    <Content Include="styles\bootstrap.css.map" />
+    <Content Include="styles\bootstrap.min.css" />
+    <Content Include="styles\bootswatch-superhero.css" />
+    <Content Include="styles\main.css" />
+    <Content Include="styles\toastr.css" />
+    <Content Include="styles\toastr.less" />
+    <Content Include="styles\toastr.min.css" />
+    <Content Include="styles\toastr.scss" />
+    <TypeScriptCompile Include="app\app.config.ts" />
+    <TypeScriptCompile Include="app\app.route.ts" />
+    <TypeScriptCompile Include="app\app.ts" />
+    <TypeScriptCompile Include="app\appController.ts" />
+    <TypeScriptCompile Include="app\services\auth.ts" />
+    <TypeScriptCompile Include="app\services\authInterceptor.ts">
+      <SubType>Code</SubType>
+      <TestFramework>ExportRunner</TestFramework>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\services\authToken.ts" />
+    <TypeScriptCompile Include="app\services\customersService.ts" />
+    <TypeScriptCompile Include="app\services\notificationService.ts" />
+    <TypeScriptCompile Include="app\views\header\headerController.ts" />
+    <TypeScriptCompile Include="app\views\jobs\jobsController.ts" />
+    <TypeScriptCompile Include="app\views\login\loginController.ts" />
+    <TypeScriptCompile Include="app\views\logout\logoutController.ts" />
+    <TypeScriptCompile Include="app\views\register\registerController.ts" />
+    <TypeScriptCompile Include="app\views\register\validateEqualsDirective.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angular-ui\angular-ui-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="server.ts" />
+    <TypeScriptCompile Include="_references.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\directives\" />
+    <Folder Include="app\services\" />
+    <Folder Include="app\views\" />
+    <Folder Include="app\views\jobs\" />
+    <Folder Include="app\views\main\" />
+    <Folder Include="app\views\header\" />
+    <Folder Include="app\views\logout\" />
+    <Folder Include="app\views\login\" />
+    <Folder Include="app\views\register\" />
+    <Folder Include="fonts\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\typings\" />
+    <Folder Include="Scripts\typings\angular-ui\" />
+    <Folder Include="Scripts\typings\angularjs\" />
+    <Folder Include="Scripts\typings\express\" />
+    <Folder Include="Scripts\typings\jquery\" />
+    <Folder Include="Scripts\typings\node\" />
+    <Folder Include="styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scripts\angular-mocks.js" />
+    <Compile Include="Scripts\angular-ui-router.js" />
+    <Compile Include="Scripts\angular-ui-router.min.js" />
+    <Compile Include="Scripts\angular.js" />
+    <Compile Include="Scripts\angular.min.js" />
+    <Compile Include="Scripts\bootstrap.js" />
+    <Compile Include="Scripts\bootstrap.min.js" />
+    <Compile Include="Scripts\jquery-1.11.1-vsdoc.js" />
+    <Compile Include="Scripts\jquery-1.11.1.js" />
+    <Compile Include="Scripts\jquery-1.11.1.min.js" />
+    <Compile Include="Scripts\npm.js" />
+    <Compile Include="Scripts\toastr.js" />
+    <Compile Include="Scripts\toastr.min.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptOutFile>./Scripts/app.js</TypeScriptOutFile>
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
