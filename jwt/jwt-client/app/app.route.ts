@@ -30,5 +30,6 @@ module route {
                 controllerAs: "jobsctlr"
             });
         $httpProvider.interceptors.push("AuthInterceptor");
-    });
+    })
+
 } 

@@ -45,7 +45,6 @@ module register {
                     this.notification.error("Error registering!");
                     this.scope.$broadcast("userupdated");
                 }); 
-            
         };
     }
 }

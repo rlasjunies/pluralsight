@@ -1,3 +1,6 @@
+interface Location {
+    origin: string;
+}
 declare var app: ng.IModule;
 declare module route {
 }
@@ -34,9 +37,11 @@ declare module services {
         private http;
         private API_URL;
         private AuthToken;
-        constructor($http: ng.IHttpService, API_URL: string, AuthToken: AuthToken);
+        private Window;
+        constructor($http: ng.IHttpService, API_URL: string, AuthToken: AuthToken, $window: ng.IWindowService);
         login: (email: any, password: any) => ng.IHttpPromise<{}>;
         register: (email: any, password: any) => ng.IHttpPromise<{}>;
+        googleAuth: () => void;
         private success;
     }
 }
@@ -106,5 +111,6 @@ declare module login {
         state: ng.ui.IStateService;
         constructor($rootScope: ng.IScope, NotificationService: services.NotificationService, Auth: services.Auth, $state: ng.ui.IStateService);
         submit: () => void;
+        google: () => void;
     }
 }

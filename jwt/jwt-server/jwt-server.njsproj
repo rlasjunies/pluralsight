@@ -36,7 +36,11 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="auth\google.ts" />
+    <TypeScriptCompile Include="auth\google.typesafe.ts" />
+    <TypeScriptCompile Include="auth\auth.ts" />
     <TypeScriptCompile Include="db.ts" />
+    <TypeScriptCompile Include="models\job.ts" />
     <TypeScriptCompile Include="models\user.ts" />
     <TypeScriptCompile Include="Scripts\bcrypt-node.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\body-parser\body-parser.d.ts" />
@@ -55,6 +59,7 @@
     <TypeScriptCompile Include="_references.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="auth\" />
     <Folder Include="models\" />
     <Folder Include="Scripts\typings\jwt-simple\" />
     <Folder Include="Scripts\typings\passport-local\" />

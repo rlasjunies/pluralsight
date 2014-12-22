@@ -1,6 +1,9 @@
-﻿/// <reference path="app/app.ts" />
+﻿/// <reference path="_definitelyTyped.ts" />
+
+/// <reference path="app/app.ts" />
 /// <reference path="app/app.route.ts" />
 /// <reference path="app/app.config.ts" />
+/// <reference path="app/app.run.ts" />
 
 /// <reference path="app/services/notificationService.ts" />
 /// <reference path="app/services/authToken.ts" />
@@ -8,7 +11,7 @@
 /// <reference path="app/services/auth.ts" />
 
  
-
+// <reference path="../jwt-server/auth/google.typesafe.ts" />
 
 /// <reference path="app/views/register/registerController.ts" />
 /// <reference path="app/views/register/validateEqualsDirective.ts" />

@@ -40,7 +40,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app\app.html" />
+    <Content Include="app\index.html" />
     <Content Include="app\views\header\header.html" />
     <Content Include="app\views\jobs\jobs.html" />
     <Content Include="app\views\login\login.html" />
@@ -67,6 +67,7 @@
     <Content Include="styles\toastr.scss" />
     <TypeScriptCompile Include="app\app.config.ts" />
     <TypeScriptCompile Include="app\app.route.ts" />
+    <TypeScriptCompile Include="app\app.run.ts" />
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\appController.ts" />
     <TypeScriptCompile Include="app\services\auth.ts" />
@@ -95,6 +96,7 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <TypeScriptCompile Include="server.ts" />
+    <TypeScriptCompile Include="_definitelyTyped.ts" />
     <TypeScriptCompile Include="_references.ts" />
   </ItemGroup>
   <ItemGroup>

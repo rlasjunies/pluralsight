@@ -3,7 +3,7 @@ import bodyparser = require("body-parser");
 import mongoose = require("mongoose");
 import libuser = require("./models/user");
 import db = require("./db");
-//import jwt = require("./services/jwt");
+
 import jwt = require("jwt-simple");
 import passport = require("passport");
 import passport_local = require("passport-local");
@@ -13,7 +13,7 @@ var app = express();
 app.use(bodyparser.json());
 app.use(passport.initialize());
 
-passport.serializeUser( (user, done: (err: any, id: any) => void) =>  {
+passport.serializeUser((user, done: (err: any, id: any) => void) => {
     done(null, user.id);
 });
 
@@ -24,111 +24,21 @@ app.use(function (req: express.Request, res: express.Response, next) {
     next();
 });
 
-var localStrategy: passport_local.Strategy = new passport_local.Strategy(
-    { usernameField: 'email' },
-    (username, password, done) => {
+import authLib = require("./auth/auth");
+var auth = authLib.init(app);
 
-        var qryUser = { email: username };
-        libuser.userModel().findOne(qryUser, function (err, dbUser) {
-            if (err) return done(err);
+//import authGoogle = require("./auth/google");
+//var authG = new authGoogle.init(app);
 
-            if (!dbUser)
-                return done(null, false, { message: "Wrong email / password" });
-
-            dbUser.comparePasswords(password, function (err, isMatching) {
-                if (err) return done(err);
-
-                if (!isMatching)
-                    return done(null, false, { message: "Wrong email / password" });
-
-                return done(null, dbUser);
-            });
-        });
-    });
-
-passport.use(localStrategy);
-
-app.get("/", function (req, res) {
-    res.redirect("/app");
+app.post('/api/authgoogle', (req: express.Request, res: express.Response) => {
+    var tsBody = req.body;
+    console.log(tsBody.code);
+    res.status(200).send("{ok}");
 });
 
+import jobsLib = require("./models/job");
+var jobs = new jobsLib.init(app);
 
-
-app.post("/api/register", function (req: express.Request, res: express.Response) {
-
-    console.log("0" + Date.now());
-    var user: libuser.IUserDocument = req.body;
-
-    console.log("1" + Date.now());
-    var userModel = libuser.userModel();
-
-    console.log("2" + Date.now());
-    var newUser: libuser.IUserDocument = new userModel({
-        email: user.email,
-        password: user.password
-    });
-
-    newUser.save(function (err) {
-        if (err) {
-            throw err;
-        }
-        createSendToken(newUser, res);
-    });
-});
-
-var jobs: any[] = [
-    { name: "IT eng." },
-    { name: "Painter" },
-    { name: "Assistant" },
-    { name: "Boucher" },
-    { name: "Driver" }
-];
-
-app.get("/api/jobs", function (req: express.Request, res: express.Response) {
-    if (!req.headers["authorization"]) {
-        return res.status(401).send({ message: "you are not authorized!" });
-    } else {
-
-        var token = req.headers["authorization"].split(" ")[1];
-        var payload = jwt.decode(token, "secret");
-
-        if (!payload.sub) {
-            return res.status(401).send({ message: 'Authentication failed' });
-        } else {
-            return res.json(jobs);
-        }
-    }
-
-});
-
-
-app.post("/api/login", function (req: express.Request, res: express.Response, next) {
-    passport.authenticate('local', (err, user) => {
-        if (err) next(err);
-
-        req.login(user, (err) => {
-            if (err) next(err);
-            createSendToken(user, res);
-        })
-    })(req, res, next);
-});
-
-function createSendToken(user, res) {
-    console.log("createToken-Start:" + Date.now());
-
-    var payload = {
-        sub: user.id
-    };
-
-    var token = jwt.encode(payload, "secret");
-
-    res.status(200).send({
-        user: user.toJSON(),
-        token: token
-    });
-    console.log("createToken-End:" + Date.now());
-
-}
 // console.log("Configuring 404 page");
 // app.use(function(req, res, next) {
 // res.statusCode = 404;
@@ -145,7 +55,7 @@ function createSendToken(user, res) {
 
 new db.db();
 
-//app.use("/", express.static(__dirname + "/../jwt-client/app"));
+app.use("/", express.static(__dirname + "/../jwt-client/app"));
 app.use("/Scripts", express.static(__dirname + "/../jwt-client/Scripts"));
 app.use("/app", express.static(__dirname + "/../jwt-client/app"));
 app.use("/styles", express.static(__dirname + "/../jwt-client/styles"));

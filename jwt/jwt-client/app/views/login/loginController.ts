@@ -37,6 +37,9 @@ module login {
                     this.rootScope.$broadcast("userupdated");
                 }); 
             
+        }
+        google = () => {
+            this.auth.googleAuth();
         };
     }
 }

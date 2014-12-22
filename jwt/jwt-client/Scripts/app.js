@@ -32,6 +32,15 @@ var route;
     });
 })(route || (route = {}));
 app.constant("API_URL", "http://localhost:3000/api");
+app.run(function ($window) {
+    var params = $window.location.search.substring(1);
+    console.log("run:" + $window.location.search);
+    if (params && $window.opener && ($window.opener.location.origin === $window.location.origin)) {
+        var pair = params.split("=");
+        var code = decodeURIComponent(pair[1]);
+        $window.opener.postMessage(code, $window.location.origin);
+    }
+});
 "use strict";
 var services;
 (function (services) {
@@ -132,7 +141,7 @@ app.factory("AuthInterceptor", function (AuthToken) {
 var services;
 (function (services) {
     var Auth = (function () {
-        function Auth($http, API_URL, AuthToken) {
+        function Auth($http, API_URL, AuthToken, $window) {
             var _this = this;
             this.login = function (email, password) {
                 return _this.http.post(_this.API_URL + "/login", { email: email, password: password }).success(_this.success);
@@ -140,20 +149,41 @@ var services;
             this.register = function (email, password) {
                 return _this.http.post(_this.API_URL + "/register", { email: email, password: password }).success(_this.success);
             };
+            this.googleAuth = function () {
+                var urlBuilder = [];
+                urlBuilder.push("response_type=code", "client_id=149876745472-k3ubq3pbtll17pmuohdjfom0fpinklmc.apps.googleusercontent.com", "redirect_uri=" + _this.Window.location.origin, "scope=profile email");
+                var url = "https://accounts.google.com/o/oauth2/auth?" + urlBuilder.join("&");
+                var options = "width=500, height=500, left=" + (_this.Window.outerWidth - 500) / 2 + ", top=" + (_this.Window.outerHeight - 500) / 2;
+                var popup = _this.Window.open(url, '', options);
+                _this.Window.focus();
+                _this.Window.addEventListener("message", function (event) {
+                    if (event.origin === _this.Window.location.origin) {
+                        console.log("We received a message from Google ..." + event.data);
+                        var code = event.data;
+                        popup.close();
+                        _this.http.post(_this.API_URL + "/authgoogle", { "code": code }).success(function (response) {
+                            console.log("success message from server");
+                        }).error(function (err) {
+                            console.log("success message from server");
+                        });
+                    }
+                });
+            };
             this.success = function (response) {
                 _this.AuthToken.setToken(response.token);
             };
             this.http = $http;
             this.API_URL = API_URL;
             this.AuthToken = AuthToken;
+            this.Window = $window;
             console.log("AuthService ... loaded");
         }
         return Auth;
     })();
     services.Auth = Auth;
 })(services || (services = {}));
-app.factory("Auth", function ($http, API_URL, AuthToken) {
-    return new services.Auth($http, API_URL, AuthToken);
+app.factory("Auth", function ($http, API_URL, AuthToken, $window) {
+    return new services.Auth($http, API_URL, AuthToken, $window);
 });
 var register;
 (function (register) {
@@ -295,6 +325,9 @@ var login;
                     _this.notification.error("Error registering!");
                     _this.rootScope.$broadcast("userupdated");
                 });
+            };
+            this.google = function () {
+                _this.auth.googleAuth();
             };
             this.rootScope = $rootScope;
             this.notification = NotificationService;
