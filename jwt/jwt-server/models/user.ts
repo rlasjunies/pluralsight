@@ -6,8 +6,14 @@ export interface IUserDocument extends mongoose.Document {
     _id: string;
     email: string;
     password: string;
+    googleId: string;
     //toJSON(): void;
-    comparePasswords(pwd, callback);
+    comparePasswords(pwd, callback);    
+}
+
+export interface IUserModel extends mongoose.Model<IUserDocument> {
+    googleID: string;
+    displayName: string;
 }
 
 // used to extend the toJSON function
@@ -18,7 +24,9 @@ export interface ISchemaUser extends mongoose.Schema {
 var userSchema: ISchemaUser =  <ISchemaUser> new mongoose.Schema();
 userSchema.add({
     email: String,
-    password: String
+    password: String,
+    googleId: String,
+    displayName: String
 });
 
 userSchema.pre('save', function (next) {
@@ -62,7 +70,12 @@ userSchema.methods.toJSON = function () {
 //    console.log('post-remove: %s has been removed', doc._id);
 //})
  
+
 //Export the mongodb model
-export function userModel(): mongoose.Model<IUserDocument>  {
-    return mongoose.model<IUserDocument>('User', userSchema);
+//export function userModel(): mongoose.Model<IUserDocument>  {
+//    return mongoose.model<IUserDocument>('User', userSchema);
+//}
+
+export function userModel(): IUserModel {
+    return <IUserModel>mongoose.model<IUserDocument>('User', userSchema);
 }

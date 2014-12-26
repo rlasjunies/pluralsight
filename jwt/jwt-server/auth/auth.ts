@@ -3,6 +3,7 @@ import passport = require("passport");
 import passport_local = require("passport-local");
 import jwt = require("jwt-simple");
 import libuser = require("../models/user");
+import libToken = require("./token");
 
 export function init(app) {
 
@@ -57,27 +58,10 @@ export function init(app) {
     passport.use('local-register', registerStrategy);
 
     app.post("/api/register", passport.authenticate('local-register'), (req: express.Request, res: express.Response) => {
-        createSendToken(req.user, res);
+        libToken.createSendToken(req.user, res);
     });
 
     app.post("/api/login", passport.authenticate('local-login'), function (req: express.Request, res: express.Response) {
-        createSendToken(req.user, res);
+        libToken.createSendToken(req.user, res);
     });
-
-    function createSendToken(user, res) {
-        console.log("createToken-Start:" + Date.now());
-
-        var payload = {
-            sub: user.id
-        };
-
-        var token = jwt.encode(payload, "secret");
-
-        res.status(200).send({
-            user: user.toJSON(),
-            token: token
-        });
-        console.log("createToken-End:" + Date.now());
-
-    }
 };

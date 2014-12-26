@@ -20,7 +20,7 @@ declare module "express-jwt" {
             credentialsRequired?: boolean;
         }
         export interface RequestHandler extends express.RequestHandler {
-            unless?: typeof unless;
+            //unless?: typeof unless;
         }
     }
     export = jwt;

@@ -141,49 +141,61 @@ app.factory("AuthInterceptor", function (AuthToken) {
 var services;
 (function (services) {
     var Auth = (function () {
-        function Auth($http, API_URL, AuthToken, $window) {
+        function Auth($http, API_URL, AuthToken, $window, $q) {
             var _this = this;
             this.login = function (email, password) {
-                return _this.http.post(_this.API_URL + "/login", { email: email, password: password }).success(_this.success);
+                return _this.$http.post(_this.API_URL + "/login", { email: email, password: password }).success(_this.success);
             };
             this.register = function (email, password) {
-                return _this.http.post(_this.API_URL + "/register", { email: email, password: password }).success(_this.success);
+                return _this.$http.post(_this.API_URL + "/register", { email: email, password: password }).success(_this.success);
             };
             this.googleAuth = function () {
                 var urlBuilder = [];
-                urlBuilder.push("response_type=code", "client_id=149876745472-k3ubq3pbtll17pmuohdjfom0fpinklmc.apps.googleusercontent.com", "redirect_uri=" + _this.Window.location.origin, "scope=profile email");
+                var clientId = "149876745472-k3ubq3pbtll17pmuohdjfom0fpinklmc.apps.googleusercontent.com";
+                urlBuilder.push("response_type=code", "client_id=" + clientId, "redirect_uri=" + _this.$window.location.origin, "scope=profile email");
                 var url = "https://accounts.google.com/o/oauth2/auth?" + urlBuilder.join("&");
-                var options = "width=500, height=500, left=" + (_this.Window.outerWidth - 500) / 2 + ", top=" + (_this.Window.outerHeight - 500) / 2;
-                var popup = _this.Window.open(url, '', options);
-                _this.Window.focus();
-                _this.Window.addEventListener("message", function (event) {
-                    if (event.origin === _this.Window.location.origin) {
+                var options = "width=500, height=500, left=" + (_this.$window.outerWidth - 500) / 2 + ", top=" + (_this.$window.outerHeight - 500) / 2;
+                var defered = _this.$q.defer();
+                var popup = _this.$window.open(url, '', options);
+                _this.$window.focus();
+                var onGoogleAuthCode = function (event) {
+                    if (event.origin === _this.$window.location.origin) {
                         console.log("We received a message from Google ..." + event.data);
                         var code = event.data;
                         popup.close();
-                        _this.http.post(_this.API_URL + "/authgoogle", { "code": code }).success(function (response) {
+                        _this.$http.post(_this.API_URL + "/authgoogle", {
+                            code: code,
+                            clientId: clientId,
+                            redirectUri: _this.$window.location.origin
+                        }).success(function (jwt) {
                             console.log("success message from server");
+                            _this.success(jwt);
+                            defered.resolve(jwt);
                         }).error(function (err) {
                             console.log("success message from server");
                         });
+                        _this.$window.removeEventListener("message", onGoogleAuthCode);
                     }
-                });
+                };
+                _this.$window.addEventListener("message", onGoogleAuthCode);
+                return defered.promise;
             };
             this.success = function (response) {
                 _this.AuthToken.setToken(response.token);
             };
-            this.http = $http;
+            this.$http = $http;
+            this.$q = $q;
             this.API_URL = API_URL;
             this.AuthToken = AuthToken;
-            this.Window = $window;
+            this.$window = $window;
             console.log("AuthService ... loaded");
         }
         return Auth;
     })();
     services.Auth = Auth;
 })(services || (services = {}));
-app.factory("Auth", function ($http, API_URL, AuthToken, $window) {
-    return new services.Auth($http, API_URL, AuthToken, $window);
+app.factory("Auth", function ($http, API_URL, AuthToken, $window, $q) {
+    return new services.Auth($http, API_URL, AuthToken, $window, $q);
 });
 var register;
 (function (register) {
@@ -327,7 +339,16 @@ var login;
                 });
             };
             this.google = function () {
-                _this.auth.googleAuth();
+                _this.auth.googleAuth().then(function (resp) {
+                    console.log("login is fine!");
+                    _this.notification.success("U are logged!");
+                    _this.rootScope.$broadcast("userupdated");
+                    _this.state.go("main");
+                }, function (err) {
+                    console.log("login:" + JSON.stringify(err));
+                    _this.notification.error("Error registering!");
+                    _this.rootScope.$broadcast("userupdated");
+                });
             };
             this.rootScope = $rootScope;
             this.notification = NotificationService;

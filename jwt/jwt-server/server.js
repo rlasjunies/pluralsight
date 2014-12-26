@@ -1,6 +1,7 @@
 var express = require("express");
 var bodyparser = require("body-parser");
 var db = require("./db");
+//import jwt = require("jwt-simple");
 var passport = require("passport");
 var app = express();
 app.use(bodyparser.json());
@@ -16,13 +17,8 @@ app.use(function (req, res, next) {
 });
 var authLib = require("./auth/auth");
 var auth = authLib.init(app);
-//import authGoogle = require("./auth/google");
-//var authG = new authGoogle.init(app);
-app.post('/api/authgoogle', function (req, res) {
-    var tsBody = req.body;
-    console.log(tsBody.code);
-    res.status(200).send("{ok}");
-});
+var authGoogle = require("./auth/google");
+var authG = new authGoogle.init(app);
 var jobsLib = require("./models/job");
 var jobs = new jobsLib.init(app);
 // console.log("Configuring 404 page");

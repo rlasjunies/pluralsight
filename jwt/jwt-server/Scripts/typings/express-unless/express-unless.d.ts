@@ -18,7 +18,7 @@ declare module "express-unless" {
             method?: any; // TODO: union type 'string|string[]' is not supported yet
         }
         export interface RequestHandler extends express.RequestHandler {
-            unless?: typeof unless;
+            //unless?: typeof unless;
         }
     }
 

@@ -34,14 +34,15 @@ declare module services {
 }
 declare module services {
     class Auth {
-        private http;
+        private $http;
         private API_URL;
         private AuthToken;
-        private Window;
-        constructor($http: ng.IHttpService, API_URL: string, AuthToken: AuthToken, $window: ng.IWindowService);
+        private $window;
+        private $q;
+        constructor($http: ng.IHttpService, API_URL: string, AuthToken: AuthToken, $window: ng.IWindowService, $q: ng.IQService);
         login: (email: any, password: any) => ng.IHttpPromise<{}>;
         register: (email: any, password: any) => ng.IHttpPromise<{}>;
-        googleAuth: () => void;
+        googleAuth: () => ng.IPromise<any>;
         private success;
     }
 }

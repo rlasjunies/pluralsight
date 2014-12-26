@@ -39,7 +39,16 @@ module login {
             
         }
         google = () => {
-            this.auth.googleAuth();
+            this.auth.googleAuth().then((resp) => {
+                console.log("login is fine!");
+                this.notification.success("U are logged!");
+                this.rootScope.$broadcast("userupdated");
+                this.state.go("main");
+            }, (err) => {
+                    console.log("login:" + JSON.stringify(err));
+                    this.notification.error("Error registering!");
+                    this.rootScope.$broadcast("userupdated");
+                } );
         };
     }
 }

@@ -1,2 +1,1 @@
 C:\Dev\pluralsight\jwt\jwt-server\bin\Microsoft.NodejsTools.WebRole.dll
-C:\Dev\pluralsight\jwt\jwt-server\obj\Debug\jwt-server.njsprojResolveAssemblyReference.cache

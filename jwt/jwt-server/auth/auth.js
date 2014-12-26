@@ -1,7 +1,7 @@
 var passport = require("passport");
 var passport_local = require("passport-local");
-var jwt = require("jwt-simple");
 var libuser = require("../models/user");
+var libToken = require("./token");
 function init(app) {
     var strategyOptions = { usernameField: 'email' };
     var loginStrategy = new passport_local.Strategy(strategyOptions, function (username, password, done) {
@@ -43,23 +43,11 @@ function init(app) {
     });
     passport.use('local-register', registerStrategy);
     app.post("/api/register", passport.authenticate('local-register'), function (req, res) {
-        createSendToken(req.user, res);
+        libToken.createSendToken(req.user, res);
     });
     app.post("/api/login", passport.authenticate('local-login'), function (req, res) {
-        createSendToken(req.user, res);
+        libToken.createSendToken(req.user, res);
     });
-    function createSendToken(user, res) {
-        console.log("createToken-Start:" + Date.now());
-        var payload = {
-            sub: user.id
-        };
-        var token = jwt.encode(payload, "secret");
-        res.status(200).send({
-            user: user.toJSON(),
-            token: token
-        });
-        console.log("createToken-End:" + Date.now());
-    }
 }
 exports.init = init;
 ;

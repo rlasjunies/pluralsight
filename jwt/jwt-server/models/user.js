@@ -3,7 +3,9 @@ var bcrypt = require("bcrypt-nodejs");
 var userSchema = new mongoose.Schema();
 userSchema.add({
     email: String,
-    password: String
+    password: String,
+    googleId: String,
+    displayName: String
 });
 userSchema.pre('save', function (next) {
     var user = this;
@@ -42,6 +44,9 @@ userSchema.methods.toJSON = function () {
 //    console.log('post-remove: %s has been removed', doc._id);
 //})
 //Export the mongodb model
+//export function userModel(): mongoose.Model<IUserDocument>  {
+//    return mongoose.model<IUserDocument>('User', userSchema);
+//}
 function userModel() {
     return mongoose.model('User', userSchema);
 }

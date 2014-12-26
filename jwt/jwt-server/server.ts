@@ -4,7 +4,7 @@ import mongoose = require("mongoose");
 import libuser = require("./models/user");
 import db = require("./db");
 
-import jwt = require("jwt-simple");
+//import jwt = require("jwt-simple");
 import passport = require("passport");
 import passport_local = require("passport-local");
 
@@ -27,14 +27,9 @@ app.use(function (req: express.Request, res: express.Response, next) {
 import authLib = require("./auth/auth");
 var auth = authLib.init(app);
 
-//import authGoogle = require("./auth/google");
-//var authG = new authGoogle.init(app);
+import authGoogle = require("./auth/google");
+var authG = new authGoogle.init(app);
 
-app.post('/api/authgoogle', (req: express.Request, res: express.Response) => {
-    var tsBody = req.body;
-    console.log(tsBody.code);
-    res.status(200).send("{ok}");
-});
 
 import jobsLib = require("./models/job");
 var jobs = new jobsLib.init(app);
