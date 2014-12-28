@@ -1,5 +1,4 @@
-﻿
-module register {
+﻿module register {
 
     export interface IController{
         submit: () => void;
@@ -8,42 +7,55 @@ module register {
     export class RegisterController implements register.IController{
         public email: string;
         public password: string;
+        public passwordConfirm: string;
 
         //http: ng.IHttpService;
-        scope: ng.IScope;
+        $scope: ng.IScope;
+        $rootScope: ng.IScope;
         notification: services.NotificationService;
         //AuthToken: services.AuthToken;
-        Auth: services.Auth;
+        $auth;
         state: ng.ui.IStateService;
 
-        constructor($rootScope: ng.IScope, NotificationService: services.NotificationService,
-            Auth: services.Auth, $state:ng.ui.IStateService) {
-            this.scope = $rootScope;
-            //this.http = $http;
+        constructor($rootScope: ng.IScope, $scope:ng.IScope, NotificationService: services.NotificationService,
+            $auth, $state:ng.ui.IStateService) {
+            this.$rootScope = $rootScope;
+            this.$scope = $scope;
             this.notification = NotificationService;
-            this.Auth= Auth;
+            this.$auth= $auth;
             this.state = $state;
+
+            this.password = "";
+            this.passwordConfirm = "";
+
+            this.$scope.$watch(() => this.password, this.checkPasswords);
+            this.$scope.$watch(() => this.passwordConfirm, this.checkPasswords);
+
             console.log("RegisterController: Constructor");
         }
 
+        checkPasswords = () => {
+            //console.log("password or confirm changed");
+            //console.log("this.$scope:" + this.$scope);
+            //console.log("this.$scope['register']:" + this.$scope["register"]["password_confirm"]);
+            this.$scope["register"]["password_confirm"].$setValidity("equal", (this.password === this.passwordConfirm));
+        }
+
         submit = () => {
-            //var url = "/api/register";
-            //var user = {
-            //    email: this.email,
-            //    password: this.password
-            //};
-            this.Auth.register(this.email, this.password)
-                .success((resp:any) => {
-                    console.log("registration is fine!");
-                    this.notification.success("U are registered!");
+            this.$auth.signup({ email: this.email, password: this.password })
+                .then((resp:any) => { 
+                    //console.log("registration is fine!"); 
+                    
+                    var msg = "Dear '"+ resp.data.user.email +"' you are now registered!. Goes in your mailbox to confirm your email address within 12 hours.";
+                    this.notification.success(msg); 
                     //this.AuthToken.setToken(resp.token);
-                    this.scope.$broadcast("userupdated");
+                    this.$scope.$broadcast("userupdated");
                     this.state.go("main");
                 })
-                .error((err) => {
+                .catch((err) => {
                     console.log("bad");
-                    this.notification.error("Error registering!");
-                    this.scope.$broadcast("userupdated");
+                    this.notification.error("Error registering!" + JSON.stringify( err));
+                    this.$scope.$broadcast("userupdated");
                 }); 
         };
     }

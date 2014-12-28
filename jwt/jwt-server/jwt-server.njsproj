@@ -7,6 +7,7 @@
     <RootNamespace>jwt-server</RootNamespace>
     <ToolsVersionPromptShown>1.1</ToolsVersionPromptShown>
     <TypeScriptToolsVersion>1.1</TypeScriptToolsVersion>
+    <LaunchUrl>/</LaunchUrl>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -23,11 +24,11 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <ProjectView>ProjectFiles</ProjectView>
-    <NodejsPort>1337</NodejsPort>
+    <NodejsPort>3000</NodejsPort>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
     <EnableTypeScript>true</EnableTypeScript>
-    <StartWebBrowser>true</StartWebBrowser>
+    <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,36 +37,49 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="auth\google.ts" />
+    <Content Include="views\emailVerification.before.zurb.inliner.html" />
+    <Content Include="views\emailVerification.html" />
+    <TypeScriptCompile Include="auth\googleAuth.ts" />
     <TypeScriptCompile Include="auth\google.typesafe.ts" />
-    <TypeScriptCompile Include="auth\auth.ts" />
+    <TypeScriptCompile Include="auth\localAuth.ts" />
+    <TypeScriptCompile Include="auth\localStrategy.ts" />
     <TypeScriptCompile Include="auth\token.ts" />
-    <TypeScriptCompile Include="db.ts" />
+    <TypeScriptCompile Include="services\db.ts" />
     <TypeScriptCompile Include="models\job.ts" />
     <TypeScriptCompile Include="models\user.ts" />
     <TypeScriptCompile Include="Scripts\bcrypt-node.d.ts" />
+    <TypeScriptCompile Include="Scripts\nodemailer-smtp-transport.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\body-parser\body-parser.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\express-jwt\express-jwt.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\express-unless\express-unless.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\form-data\form-data.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jwt-simple\jwt-simple.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\nodemailer\nodemailer.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <TypeScriptCompile Include="Scripts\typings\passport-local\passport-local.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\passport\passport.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\request\request.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\underscore\underscore.d.ts" />
     <TypeScriptCompile Include="server.ts" />
-    <TypeScriptCompile Include="services\jwt.ts" />
+    <TypeScriptCompile Include="services\config.ts" />
+    <TypeScriptCompile Include="auth\facebookAuth.ts" />
+    <TypeScriptCompile Include="auth\emailVerification.ts" />
     <TypeScriptCompile Include="_references.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="auth\" />
     <Folder Include="models\" />
+    <Folder Include="Scripts\typings\nodemailer\" />
+    <Folder Include="Scripts\typings\underscore\" />
+    <Folder Include="views\" />
     <Folder Include="Scripts\typings\form-data\" />
     <Folder Include="Scripts\typings\jwt-simple\" />
+    <Folder Include="Scripts\typings\moment\" />
     <Folder Include="Scripts\typings\passport-local\" />
     <Folder Include="Scripts\typings\passport\" />
     <Folder Include="Scripts\typings\request\" />

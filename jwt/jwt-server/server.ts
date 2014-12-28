@@ -1,14 +1,23 @@
 import express = require("express");
 import bodyparser = require("body-parser");
 import mongoose = require("mongoose");
-import libuser = require("./models/user");
-import db = require("./db");
-
-//import jwt = require("jwt-simple");
 import passport = require("passport");
 import passport_local = require("passport-local");
 
+import xToken = require("./auth/token");
+import xUser = require("./models/user");
+import xLocalStrategy = require("./auth/localStrategy");
+import xAuthLocal = require("./auth/localAuth");
+import xAuthFacebook = require("./auth/facebookAuth");
+import xAuthGoogle = require("./auth/googleAuth");
+import xEmailVerif = require("./auth/emailVerification");
+import xDb = require("./db");
+import xJobs = require("./models/job");
+
+//xEmailVerif.send("rlasjunies@gmail.com", null);
+
 var app = express();
+new xDb.db();
 
 app.use(bodyparser.json());
 app.use(passport.initialize());
@@ -24,39 +33,23 @@ app.use(function (req: express.Request, res: express.Response, next) {
     next();
 });
 
-import authLib = require("./auth/auth");
-var auth = authLib.init(app);
+passport.use('local-register', xLocalStrategy.register());
+passport.use('local-login', xLocalStrategy.login());
 
-import authGoogle = require("./auth/google");
-var authG = new authGoogle.init(app);
+app.post('/auth/register', passport.authenticate('local-register'), xAuthLocal.register);
+app.get('/auth/verifyemail', xEmailVerif.verify);
+app.post('/auth/login', passport.authenticate('local-login'),  xAuthLocal.login);
+app.post('/auth/facebook', xAuthFacebook.facebookAuth);
+app.post('/auth/google', xAuthGoogle.googleAuth);
 
+app.get('/api/jobs', xJobs.getJobs)
 
-import jobsLib = require("./models/job");
-var jobs = new jobsLib.init(app);
-
-// console.log("Configuring 404 page");
-// app.use(function(req, res, next) {
-// res.statusCode = 404;
-// res.description = "Not found";
-// res.render("404");
-// });
-// console.log("Configuring 500 page");
-// app.use(function(err, req, res, next) {
-// console.log(err.stack);
-// res.statusCode = 500;
-// res.description = "Internal server error";
-// res.render("500");
-// });
-
-new db.db();
-
-app.use("/", express.static(__dirname + "/../jwt-client/app"));
-app.use("/Scripts", express.static(__dirname + "/../jwt-client/Scripts"));
-app.use("/app", express.static(__dirname + "/../jwt-client/app"));
-app.use("/styles", express.static(__dirname + "/../jwt-client/styles"));
-app.use("/fonts", express.static(__dirname + "/../jwt-client/fonts"));
+app.use('/', express.static(__dirname + "/../jwt-client/app"));
+app.use('/Scripts', express.static(__dirname + "/../jwt-client/Scripts"));
+app.use('/app', express.static(__dirname + "/../jwt-client/app"));
+app.use('/styles', express.static(__dirname + "/../jwt-client/styles"));
+app.use('/fonts', express.static(__dirname + "/../jwt-client/fonts"));
+app.use('/views', express.static(__dirname + "/views"));
 
 console.log("simple static server listening at http://localhost:3000");
 app.listen("3000");
-
-

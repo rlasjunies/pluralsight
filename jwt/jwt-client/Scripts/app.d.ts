@@ -42,7 +42,6 @@ declare module services {
         constructor($http: ng.IHttpService, API_URL: string, AuthToken: AuthToken, $window: ng.IWindowService, $q: ng.IQService);
         login: (email: any, password: any) => ng.IHttpPromise<{}>;
         register: (email: any, password: any) => ng.IHttpPromise<{}>;
-        googleAuth: () => ng.IPromise<any>;
         private success;
     }
 }
@@ -53,25 +52,28 @@ declare module register {
     class RegisterController implements IController {
         email: string;
         password: string;
-        scope: ng.IScope;
+        passwordConfirm: string;
+        $scope: ng.IScope;
+        $rootScope: ng.IScope;
         notification: services.NotificationService;
-        Auth: services.Auth;
+        $auth: any;
         state: ng.ui.IStateService;
-        constructor($rootScope: ng.IScope, NotificationService: services.NotificationService, Auth: services.Auth, $state: ng.ui.IStateService);
+        constructor($rootScope: ng.IScope, $scope: ng.IScope, NotificationService: services.NotificationService, $auth: any, $state: ng.ui.IStateService);
+        checkPasswords: () => void;
         submit: () => void;
     }
 }
 declare module register {
     class ValidateEqualsDirective implements ng.IDirective {
         require: string;
-        link: (scope: ng.IScope, instanceElement: ng.IAugmentedJQuery, instanceAttributes: ng.IAttributes, controller: ng.INgModelController, transclude: ng.ITranscludeFunction) => void;
+        link: (scope: ng.IScope, instanceElement: ng.IAugmentedJQuery, attrs: ng.IAttributes, controller: ng.INgModelController) => void;
     }
 }
 declare module header {
     class HeaderController {
         isAuthenticated: boolean;
-        AuthToken: services.AuthToken;
-        constructor($scope: ng.IScope, AuthToken: services.AuthToken);
+        $auth: any;
+        constructor($scope: ng.IScope, $auth: any);
     }
 }
 declare module jobs {
@@ -87,9 +89,9 @@ declare module jobs {
 declare module logout {
     class LogoutController {
         rootScope: ng.IScope;
-        AuthToken: services.AuthToken;
+        $auth: any;
         state: ng.ui.IStateService;
-        constructor($rootScope: ng.IScope, AuthToken: services.AuthToken, $state: ng.ui.IStateService, NotificationService: services.NotificationService);
+        constructor($rootScope: ng.IScope, $auth: any, $state: ng.ui.IStateService, NotificationService: services.NotificationService);
     }
 }
 declare module app_ {
@@ -108,10 +110,10 @@ declare module login {
         password: string;
         rootScope: ng.IScope;
         notification: services.NotificationService;
-        auth: services.Auth;
+        $auth: any;
         state: ng.ui.IStateService;
-        constructor($rootScope: ng.IScope, NotificationService: services.NotificationService, Auth: services.Auth, $state: ng.ui.IStateService);
+        constructor($rootScope: ng.IScope, NotificationService: services.NotificationService, $state: ng.ui.IStateService, $auth: any);
         submit: () => void;
-        google: () => void;
+        authenticate: (provider: string) => void;
     }
 }

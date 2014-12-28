@@ -1,2 +1,2 @@
 import express = require("express");
-export declare function init(app: express.Application): void;
+export declare function getJobs(req: express.Request, res: express.Response): express.Response;

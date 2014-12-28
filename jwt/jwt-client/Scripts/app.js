@@ -1,9 +1,9 @@
 "use strict";
-var app = angular.module("app", ['ui.router']);
+var app = angular.module("app", ['ui.router', 'satellizer']);
 'use strict';
 var route;
 (function (route) {
-    app.config(function ($urlRouterProvider, $stateProvider, $httpProvider) {
+    app.config(function ($urlRouterProvider, $stateProvider, $httpProvider, $authProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider.state('main', {
             url: '/',
@@ -32,6 +32,19 @@ var route;
     });
 })(route || (route = {}));
 app.constant("API_URL", "http://localhost:3000/api");
+app.constant("AUTH_URL", "http://localhost:3000/auth");
+app.config(function ($authProvider, AUTH_URL) {
+    $authProvider.google({
+        clientId: "149876745472-k3ubq3pbtll17pmuohdjfom0fpinklmc.apps.googleusercontent.com",
+        url: AUTH_URL + '/google',
+    });
+    $authProvider.facebook({
+        clientId: "1608138689408302",
+        url: AUTH_URL + '/facebook',
+    });
+    $authProvider.loginUrl = AUTH_URL + '/login';
+    $authProvider.signupUrl = AUTH_URL + '/register';
+});
 app.run(function ($window) {
     var params = $window.location.search.substring(1);
     console.log("run:" + $window.location.search);
@@ -149,37 +162,6 @@ var services;
             this.register = function (email, password) {
                 return _this.$http.post(_this.API_URL + "/register", { email: email, password: password }).success(_this.success);
             };
-            this.googleAuth = function () {
-                var urlBuilder = [];
-                var clientId = "149876745472-k3ubq3pbtll17pmuohdjfom0fpinklmc.apps.googleusercontent.com";
-                urlBuilder.push("response_type=code", "client_id=" + clientId, "redirect_uri=" + _this.$window.location.origin, "scope=profile email");
-                var url = "https://accounts.google.com/o/oauth2/auth?" + urlBuilder.join("&");
-                var options = "width=500, height=500, left=" + (_this.$window.outerWidth - 500) / 2 + ", top=" + (_this.$window.outerHeight - 500) / 2;
-                var defered = _this.$q.defer();
-                var popup = _this.$window.open(url, '', options);
-                _this.$window.focus();
-                var onGoogleAuthCode = function (event) {
-                    if (event.origin === _this.$window.location.origin) {
-                        console.log("We received a message from Google ..." + event.data);
-                        var code = event.data;
-                        popup.close();
-                        _this.$http.post(_this.API_URL + "/authgoogle", {
-                            code: code,
-                            clientId: clientId,
-                            redirectUri: _this.$window.location.origin
-                        }).success(function (jwt) {
-                            console.log("success message from server");
-                            _this.success(jwt);
-                            defered.resolve(jwt);
-                        }).error(function (err) {
-                            console.log("success message from server");
-                        });
-                        _this.$window.removeEventListener("message", onGoogleAuthCode);
-                    }
-                };
-                _this.$window.addEventListener("message", onGoogleAuthCode);
-                return defered.promise;
-            };
             this.success = function (response) {
                 _this.AuthToken.setToken(response.token);
             };
@@ -201,24 +183,32 @@ var register;
 (function (register) {
     ;
     var RegisterController = (function () {
-        function RegisterController($rootScope, NotificationService, Auth, $state) {
+        function RegisterController($rootScope, $scope, NotificationService, $auth, $state) {
             var _this = this;
+            this.checkPasswords = function () {
+                _this.$scope["register"]["password_confirm"].$setValidity("equal", (_this.password === _this.passwordConfirm));
+            };
             this.submit = function () {
-                _this.Auth.register(_this.email, _this.password).success(function (resp) {
-                    console.log("registration is fine!");
-                    _this.notification.success("U are registered!");
-                    _this.scope.$broadcast("userupdated");
+                _this.$auth.signup({ email: _this.email, password: _this.password }).then(function (resp) {
+                    var msg = "Dear '" + resp.data.user.email + "' you are now registered!. Goes in your mailbox to confirm your email address within 12 hours.";
+                    _this.notification.success(msg);
+                    _this.$scope.$broadcast("userupdated");
                     _this.state.go("main");
-                }).error(function (err) {
+                }).catch(function (err) {
                     console.log("bad");
-                    _this.notification.error("Error registering!");
-                    _this.scope.$broadcast("userupdated");
+                    _this.notification.error("Error registering!" + JSON.stringify(err));
+                    _this.$scope.$broadcast("userupdated");
                 });
             };
-            this.scope = $rootScope;
+            this.$rootScope = $rootScope;
+            this.$scope = $scope;
             this.notification = NotificationService;
-            this.Auth = Auth;
+            this.$auth = $auth;
             this.state = $state;
+            this.password = "";
+            this.passwordConfirm = "";
+            this.$scope.$watch(function () { return _this.password; }, this.checkPasswords);
+            this.$scope.$watch(function () { return _this.passwordConfirm; }, this.checkPasswords);
             console.log("RegisterController: Constructor");
         }
         return RegisterController;
@@ -226,22 +216,32 @@ var register;
     register.RegisterController = RegisterController;
 })(register || (register = {}));
 app.controller("RegisterController", register.RegisterController);
+'use strict';
 var register;
 (function (register) {
     var ValidateEqualsDirective = (function () {
         function ValidateEqualsDirective() {
             this.require = "ngModel";
-            this.link = function (scope, instanceElement, instanceAttributes, controller, transclude) {
+            this.link = function (scope, instanceElement, attrs, controller) {
                 function validateEqual(value) {
-                    var valid = (value === scope.$eval(instanceAttributes["validateEquals"]));
-                    controller.$setValidity("equal", valid);
+                    console.log("validateEqual-value:" + value);
+                    console.log("validateEqual-scope.$eval(attrs['controllerValidateEquals'])):" + scope.$eval(attrs["controllerValidateEquals"]));
+                    var valid = (value === scope.$eval(attrs["controllerValidateEquals"]));
+                    console.log("isValid?:" + valid);
                     return valid ? value : undefined;
                 }
                 ;
                 controller.$parsers.push(validateEqual);
                 controller.$formatters.push(validateEqual);
-                scope.$watch(instanceAttributes["validateEquals"], function () {
-                    controller.$setViewValue(controller.$viewValue);
+                scope.$watch(attrs["controllerValidateEquals"], function () {
+                    console.log("scope.$watch of - val of ctlr.password:" + scope.$eval(attrs["controllerValidateEquals"]));
+                    console.log("scope.$watch of - val of confirmPassword", controller.$viewValue);
+                    if (controller.$viewValue === scope.$eval(attrs["controllerValidateEquals"])) {
+                        controller.$setValidity("equal", true);
+                    }
+                    else {
+                        controller.$setValidity("equal", false);
+                    }
                 });
             };
         }
@@ -249,19 +249,19 @@ var register;
     })();
     register.ValidateEqualsDirective = ValidateEqualsDirective;
 })(register || (register = {}));
-app.directive("validateEquals", function () {
+app.directive("x", function () {
     return new register.ValidateEqualsDirective();
 });
 var header;
 (function (header) {
     var HeaderController = (function () {
-        function HeaderController($scope, AuthToken) {
+        function HeaderController($scope, $auth) {
             var _this = this;
-            this.AuthToken = AuthToken;
-            this.isAuthenticated = this.AuthToken.isAuthenticated();
+            this.$auth = $auth;
+            this.isAuthenticated = this.$auth.isAuthenticated();
             console.log("HeaderController: Constructor");
             $scope.$on("userupdated", function (event) {
-                _this.isAuthenticated = _this.AuthToken.isAuthenticated();
+                _this.isAuthenticated = _this.$auth.isAuthenticated();
             });
         }
         return HeaderController;
@@ -292,12 +292,12 @@ app.controller("JobsController", jobs.JobsController);
 var logout;
 (function (logout) {
     var LogoutController = (function () {
-        function LogoutController($rootScope, AuthToken, $state, NotificationService) {
+        function LogoutController($rootScope, $auth, $state, NotificationService) {
             this.rootScope = $rootScope;
-            this.AuthToken = AuthToken;
+            this.$auth = $auth;
             this.state = $state;
             console.log("LogoutController: Constructor");
-            this.AuthToken.remove();
+            this.$auth.logout();
             this.rootScope.$broadcast("userupdated");
             this.state.go("main");
             NotificationService.info("You are now logout!", "Authentication message");
@@ -324,27 +324,31 @@ var login;
 (function (login) {
     ;
     var LoginController = (function () {
-        function LoginController($rootScope, NotificationService, Auth, $state) {
+        function LoginController($rootScope, NotificationService, $state, $auth) {
             var _this = this;
             this.submit = function () {
-                _this.auth.login(_this.email, _this.password).success(function (response) {
-                    console.log("login is fine!");
-                    _this.notification.success("U are logged!");
+                _this.$auth.login({ email: _this.email, password: _this.password }).then(function (response) {
+                    var msg = "Thanks '" + response.data.user.email + "'for coming back!";
+                    _this.notification.success(msg);
+                    if (!response.data.user.active) {
+                        msg = "Do not forget to active your account via the email sent!";
+                        _this.notification.warning(msg);
+                    }
                     _this.rootScope.$broadcast("userupdated");
                     _this.state.go("main");
-                }).error(function (err) {
+                }).catch(function (err) {
                     console.log("login:" + JSON.stringify(err));
                     _this.notification.error("Error registering!");
                     _this.rootScope.$broadcast("userupdated");
                 });
             };
-            this.google = function () {
-                _this.auth.googleAuth().then(function (resp) {
+            this.authenticate = function (provider) {
+                _this.$auth.authenticate(provider).then(function () {
                     console.log("login is fine!");
                     _this.notification.success("U are logged!");
                     _this.rootScope.$broadcast("userupdated");
                     _this.state.go("main");
-                }, function (err) {
+                }).catch(function (err) {
                     console.log("login:" + JSON.stringify(err));
                     _this.notification.error("Error registering!");
                     _this.rootScope.$broadcast("userupdated");
@@ -352,7 +356,7 @@ var login;
             };
             this.rootScope = $rootScope;
             this.notification = NotificationService;
-            this.auth = Auth;
+            this.$auth = $auth;
             this.state = $state;
             console.log("LoginController: Constructor");
         }

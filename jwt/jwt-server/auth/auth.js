@@ -1,10 +1,14 @@
-var passport = require("passport");
+//import express = require("express");
+//import passport = require("passport");
 var passport_local = require("passport-local");
+//import jwt = require("jwt-simple");
 var libuser = require("../models/user");
-var libToken = require("./token");
-function init(app) {
+//import libToken = require("./token");
+//export function init(app) {
+//    var loginStrategy: passport_local.Strategy = new passport_local.Strategy(strategyOptions, (username, password, done) => {
+function login() {
     var strategyOptions = { usernameField: 'email' };
-    var loginStrategy = new passport_local.Strategy(strategyOptions, function (username, password, done) {
+    return new passport_local.Strategy(strategyOptions, function (username, password, done) {
         var qryUser = { email: username };
         libuser.userModel().findOne(qryUser, function (err, dbUser) {
             if (err)
@@ -20,8 +24,11 @@ function init(app) {
             });
         });
     });
-    passport.use('local-login', loginStrategy);
-    var registerStrategy = new passport_local.Strategy(strategyOptions, function (username, password, done) {
+}
+exports.login = login;
+function register() {
+    var strategyOptions = { usernameField: 'email' };
+    return new passport_local.Strategy(strategyOptions, function (username, password, done) {
         var userModel = libuser.userModel();
         var qryUser = { email: username };
         libuser.userModel().findOne(qryUser, function (err, dbUser) {
@@ -41,14 +48,6 @@ function init(app) {
             });
         });
     });
-    passport.use('local-register', registerStrategy);
-    app.post("/api/register", passport.authenticate('local-register'), function (req, res) {
-        libToken.createSendToken(req.user, res);
-    });
-    app.post("/api/login", passport.authenticate('local-login'), function (req, res) {
-        libToken.createSendToken(req.user, res);
-    });
 }
-exports.init = init;
-;
+exports.register = register;
 //# sourceMappingURL=auth.js.map

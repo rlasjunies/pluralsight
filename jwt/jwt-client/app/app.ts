@@ -1,3 +1,3 @@
 ﻿"use strict";
     
-var app: ng.IModule = angular.module("app", ['ui.router']);       
+var app: ng.IModule = angular.module("app", ['ui.router','satellizer']);       

@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 module route {
-    app.config(function ($urlRouterProvider, $stateProvider: ng.ui.IStateProvider, $httpProvider: ng.IHttpProvider) {
+    app.config(function ($urlRouterProvider, $stateProvider: ng.ui.IStateProvider, $httpProvider: ng.IHttpProvider, $authProvider) {
 
         $urlRouterProvider.otherwise('/')
 

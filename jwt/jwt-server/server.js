@@ -1,9 +1,16 @@
 var express = require("express");
 var bodyparser = require("body-parser");
-var db = require("./db");
-//import jwt = require("jwt-simple");
 var passport = require("passport");
+var xLocalStrategy = require("./auth/localStrategy");
+var xAuthLocal = require("./auth/localAuth");
+var xAuthFacebook = require("./auth/facebookAuth");
+var xAuthGoogle = require("./auth/googleAuth");
+var xEmailVerif = require("./auth/emailVerification");
+var xDb = require("./db");
+var xJobs = require("./models/job");
+//xEmailVerif.send("rlasjunies@gmail.com", null);
 var app = express();
+new xDb.db();
 app.use(bodyparser.json());
 app.use(passport.initialize());
 passport.serializeUser(function (user, done) {
@@ -15,31 +22,20 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     next();
 });
-var authLib = require("./auth/auth");
-var auth = authLib.init(app);
-var authGoogle = require("./auth/google");
-var authG = new authGoogle.init(app);
-var jobsLib = require("./models/job");
-var jobs = new jobsLib.init(app);
-// console.log("Configuring 404 page");
-// app.use(function(req, res, next) {
-// res.statusCode = 404;
-// res.description = "Not found";
-// res.render("404");
-// });
-// console.log("Configuring 500 page");
-// app.use(function(err, req, res, next) {
-// console.log(err.stack);
-// res.statusCode = 500;
-// res.description = "Internal server error";
-// res.render("500");
-// });
-new db.db();
-app.use("/", express.static(__dirname + "/../jwt-client/app"));
-app.use("/Scripts", express.static(__dirname + "/../jwt-client/Scripts"));
-app.use("/app", express.static(__dirname + "/../jwt-client/app"));
-app.use("/styles", express.static(__dirname + "/../jwt-client/styles"));
-app.use("/fonts", express.static(__dirname + "/../jwt-client/fonts"));
+passport.use('local-register', xLocalStrategy.register());
+passport.use('local-login', xLocalStrategy.login());
+app.post('/auth/register', passport.authenticate('local-register'), xAuthLocal.register);
+app.get('/auth/verifyemail', xEmailVerif.verify);
+app.post('/auth/login', passport.authenticate('local-login'), xAuthLocal.login);
+app.post('/auth/facebook', xAuthFacebook.facebookAuth);
+app.post('/auth/google', xAuthGoogle.googleAuth);
+app.get('/api/jobs', xJobs.getJobs);
+app.use('/', express.static(__dirname + "/../jwt-client/app"));
+app.use('/Scripts', express.static(__dirname + "/../jwt-client/Scripts"));
+app.use('/app', express.static(__dirname + "/../jwt-client/app"));
+app.use('/styles', express.static(__dirname + "/../jwt-client/styles"));
+app.use('/fonts', express.static(__dirname + "/../jwt-client/fonts"));
+app.use('/views', express.static(__dirname + "/views"));
 console.log("simple static server listening at http://localhost:3000");
 app.listen("3000");
 //# sourceMappingURL=server.js.map

@@ -1,15 +1,16 @@
-var libJwt = require("jwt-simple");
+var jwt = require("jwt-simple");
+var moment = require("moment");
+var config = require("../services/config");
 function createSendToken(user, res) {
-    console.log("createToken-Start:" + Date.now());
     var payload = {
-        sub: user.id
+        sub: user.id,
+        exp: moment().add(10, 'seconds').unix()
     };
-    var token = libJwt.encode(payload, "secret");
+    var token = jwt.encode(payload, config.JWT_SECRET);
     res.status(200).send({
         user: user.toJSON(),
         token: token
     });
-    console.log("createToken-End:" + Date.now());
 }
 exports.createSendToken = createSendToken;
 //# sourceMappingURL=token.js.map

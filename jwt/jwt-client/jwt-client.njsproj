@@ -27,7 +27,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
     <EnableTypeScript>true</EnableTypeScript>
@@ -83,7 +83,6 @@
     <TypeScriptCompile Include="app\views\login\loginController.ts" />
     <TypeScriptCompile Include="app\views\logout\logoutController.ts" />
     <TypeScriptCompile Include="app\views\register\registerController.ts" />
-    <TypeScriptCompile Include="app\views\register\validateEqualsDirective.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui\angular-ui-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
@@ -95,13 +94,13 @@
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\sprintf\sprintf.d.ts" />
     <TypeScriptCompile Include="server.ts" />
     <TypeScriptCompile Include="_definitelyTyped.ts" />
     <TypeScriptCompile Include="_references.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
-    <Folder Include="app\directives\" />
     <Folder Include="app\services\" />
     <Folder Include="app\views\" />
     <Folder Include="app\views\jobs\" />
@@ -117,6 +116,7 @@
     <Folder Include="Scripts\typings\angularjs\" />
     <Folder Include="Scripts\typings\express\" />
     <Folder Include="Scripts\typings\jquery\" />
+    <Folder Include="Scripts\typings\sprintf\" />
     <Folder Include="Scripts\typings\node\" />
     <Folder Include="styles\" />
   </ItemGroup>
@@ -132,6 +132,8 @@
     <Compile Include="Scripts\jquery-1.11.1.js" />
     <Compile Include="Scripts\jquery-1.11.1.min.js" />
     <Compile Include="Scripts\npm.js" />
+    <Compile Include="Scripts\satellizer.js" />
+    <Compile Include="Scripts\satellizer.min.js" />
     <Compile Include="Scripts\toastr.js" />
     <Compile Include="Scripts\toastr.min.js" />
   </ItemGroup>

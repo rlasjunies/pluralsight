@@ -4,12 +4,14 @@ var userSchema = new mongoose.Schema();
 userSchema.add({
     email: String,
     password: String,
+    active: Boolean,
     googleId: String,
+    facebookId: String,
     displayName: String
 });
 userSchema.pre('save', function (next) {
     var user = this;
-    console.log("user - stringify:" + JSON.stringify(user));
+    //console.log("user - stringify:" + JSON.stringify(user));
     if (!user.isModified('password'))
         return next();
     bcrypt.genSalt(10, function (err, salt) {
